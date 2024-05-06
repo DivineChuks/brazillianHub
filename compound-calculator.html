@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="Brillianzhub">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="images/logo/favicon.png">
+    <!--Font awsome-->
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+    <!--Proxima Nova now Font-->
+    <link rel="stylesheet" href="font/stylesheet.css">
+
+     <!-- Bootstrap CSS -->
+    <link href="bootstrap-5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
+
+
+  	<link rel="stylesheet" href="stylesheet/style.css?v=0" type="text/css">
+  	<link rel="stylesheet" href="stylesheet/media.css?v=0" type="text/css">
+
+	<title>Brillianzhub</title>
+</head>
+<body>
+	<!-- Navigation bar -->
+	<header class="fixed-top a">
+		<nav class="container-fluid div-padding home-nav-bg-white desktop main-nav b">
+			<a href="index.html">
+				<img src="images/logo/dnav_logo.png" alt="Brillianzhub logo" class="img-fluid nav-logo b">
+			</a>
+
+			<div class="nav-links c">
+				<ul>
+					<li>
+						<a href="about.html" class="active-page">About</a>
+					</li>
+					<li>
+						<a href="courses.html">Courses</a>
+					</li>
+					<li>
+						<a href="investments.html">Investments</a>
+					</li>
+                    <li>
+                        <div class="dropdown">
+                          <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            Calculator
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li>
+                                <a class="dropdown-item" href="compound-calculator.html">
+                                    <img src="icons/nav-money.svg" class="img-fluid icon-course">&nbsp;
+                                    <span>Compound Savings Calculator</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="stock-calculator.html">
+                                    <img src="icons/nav-stock.svg" class="img-fluid icon-course">&nbsp;
+                                    <span>Stock Investment Calculator</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="real-estate-calculator.html">
+                                    <img src="icons/nav-investment.svg" class="img-fluid icon-course">&nbsp;
+                                    <span>Real Estate Investment Calculator</span>
+                                </a>
+                            </li>
+                          </ul>
+                        </div>
+                    </li>
+					<li>
+						<a href="contact.html">Contact</a>
+					</li>
+					<li class="btn-link">
+						<a href="signin.html" class="account_btn">My Account
+						</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+	    <div class="header phone">
+	        <nav class="vnav home-nav-bg-white">
+	            <a href="index.html">
+	                <img src="images/logo/logoMenu.png" alt="Brillianzhub logo" class="phone-header-logo">
+	            </a>
+
+	            <a href="" data-bs-toggle="modal" data-bs-target="#menuModal">
+	                <img src="icons/menu.svg" class="nav__icon">
+	            </a>
+	        </nav>
+	    </div>
+	</header>
+
+	<main class="main no-main">
+        <div class="container-fluid cal-div-holder div-holder home-nav-bg-green contact-div nav-clearance c">
+            <div class="grid-container-contact-div div-padding">
+                <div class="calculator-bg first-div-deatils  img-holder b">
+                    <div class="container-fluid signup-holder2">
+                        <h2>Investor’s <br>Calculator</h2>
+                    </div>
+                </div>
+
+                <div class="form-holder-div2 disclaimer-div-holder c">
+                    <div class="container-fluid disclaimer-div disclaimer-div1 c">
+                        <h5>Compound Savings Calculator</h5>
+                        <p>
+                            A compound monthly savings calculator helps individuals plan and visualize their savings growth over time.
+                        </p>
+
+                        <p class="disclaimer-p">
+                            By inputting initial savings, interest rate, and contribution frequency, users can see how their money can grow through compounding. This tool aids in informed decision-making for long-term financial goals like retirement or education planning.
+                        </p>
+                    </div>
+
+                    <div class="container-fluid form-details c">
+                        <form action="index.html" class="mb-5">
+                            <div class="style-form form-mb">
+                              <label class="form-label">Investment Amount</label>
+                              <input type="text" class="form-control" id="amount" placeholder="How much would you like to invest?">
+                            </div>
+
+                            <div class="style-form form-mb">
+                              <label class="form-label">Investment Type</label>
+                                <select class="form-select" id="investment_type">
+                                  <option>Real estate</option>
+                                  <option>Stocks</option>
+                                </select>
+                            </div>
+
+                            <div class="style-form form-mb">
+                              <label class="form-label">Duration</label>
+                                <select class="form-select" id="duration">
+                                  <option value="">Select investment duration</option>
+                                  <option value="1">1 year</option>
+                                  <option value="2">2 years</option>
+                                  <option value="3">3 years</option>
+                                  <option value="4">4 years</option>
+                                  <option value="5">5 years</option>
+                                </select>
+                            </div>
+
+                            <div class="style-form form-mb">
+                              <label class="form-label">Interest Rate</label>
+                              <input type="text" class="form-control" id="interest_rate" placeholder="How many percent interest?">
+                            </div>
+
+                            <p class="text-end mb-0">
+                                <button onclick="calculateEarnings()" class="filled-btn-lg">
+                                    Calculate My Earning
+                                </button>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Predicted Earnings Section -->
+            <div style="background-color: #FAFFFF;">
+            </div>
+            <div class="w-full md:max-w-screen-xl px-4 md:px-24 mx-auto py-5">
+                <h2 class="mb-1 text-2xl font-semibold">Predicted Earnings</h2>
+                <p class="mb-4 text-base">Market analysis of stock and the predicted earnings calculated.</p>
+                <div class="row bg-white">
+                    <div class="col-md-6">
+                        <!-- Placeholder for the graph -->
+                        <div class="card">
+                            <div class="card-body" style="height: 300px; width: 100%;">
+                                <canvas id="stockGraph"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="initialDeposit" class="form-label">Initial Deposit</label>
+                                        <input type="text" class="form-control" id="initialDeposit" value="₦400,000" readonly style="background-color: #f8f9fa;">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="totalInterestPaid" class="form-label">Total Interest Paid</label>
+                                        <input type="text" class="form-control border border-[#f8f8f8]" id="totalInterestPaid" value="₦800,000" readonly style="background-color: #f8f9fa;">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="totalReturn" class="form-label">Total Return</label>
+                                        <input type="text" class="form-control" id="totalReturn" value="₦1,200,000" readonly style="background-color: #f8f9fa;">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="py-4" style="background-color: #FAFFFF;">
+            </div>
+        <!-- About Section -->
+
+        <div class="max-w-screen-xl mx-auto px-4 md:px-24 py-5">
+            <h1 class="text-2xl font-semibold mb-4">About</h1>
+        
+            <div class="bg-white overflow-x-auto">
+                <table class="table-auto w-full text-left border border-[#CFD6DC] rounded-md p-6">
+                    <thead class="border-b border-gray-200 my-2">
+                        <tr class="">
+                            <th class="px-2 py-2 font-bold">Company Name</th>
+                            <th class="px-2 py-2 font-bold">Symbol</th>
+                            <th class="px-2 py-2 font-bold">Country</th>
+                            <th class="px-2 py-2 font-bold">Share Price ($)</th>
+                            <th class="px-2 py-2 font-bold">Traded Volume</th>
+                            <th class="px-2 py-2 font-bold">Market Cap</th>
+                            <th class="px-2 py-2 font-bold">Recommendation</th>
+                        </tr>
+                    </thead>
+                  
+                    <tbody>
+                        <tr>
+                            <td class="px-2 py-2">Alphabet Inc.</td>
+                            <td class="px-2 py-2">GOOG</td>
+                            <td class="px-2 py-2">United<br /> States</td>
+                            <td class="px-2 py-2">150.17</td>
+                            <td class="px-2 py-2">68009987</td>
+                            <td class="px-2 py-2">890088099</td>
+                            <td class="px-2 py-2 text-blue-500 hover:text-blue-700">
+                                <a href="#" class="font-semibold">Buy Stock</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        
+            <p class="mt-4 text-[#051722] w-3/4 text-base mb-4">
+                Our investor's calculator is designed to provide guidance on potential investment returns. It is essential to understand that this tool serves as a guide.
+            </p>
+            <p class="mt-2 text-base text-[#051722] w-3/4">
+                After using the calculator to assess rates and returns, we recommend booking a consultation with us for a comprehensive and detailed discussion tailored to your specific investment needs.
+            </p>
+        </div>
+        <div class="py-4" style="background-color: #FAFFFF;">
+        </div>
+
+        <!-- Disclaimer -->
+
+        <div class="max-w-screen-xl mx-auto px-4 md:px-24 py-5">
+            <h1 class="text-2xl font-semibold text-gray-800 mb-4">Disclaimer</h1>
+            <div class="bg-white">
+                <p class="text-gray-700 mb-6 text-base">
+                    Our investor's calculator is designed to provide guidance on potential investment returns. It is essential to understand that this tool serves as a guide.
+                </p>
+                <p class="text-gray-700 mb-6 text-base">
+                    After using the calculator to assess rates and returns, we recommend booking a consultation with us for a comprehensive and detailed discussion tailored to your specific investment needs.
+                </p>
+                <div class="w-full justify-center flex my-8">
+                    <button class="font-semibold text-base font-normal text-gray-700 py-2 px-4 rounded-l-md rounded-tr-none rounded-br-md" style="background-color: #10E0E0; color: black; padding: 8px 16px; transition: background-color 0.3s, transform 0.3s;"
+                    onmouseover="this.style.backgroundColor='black'; this.style.color='#10E0E0'; this.style.transform='scale(1.1)';"
+                    onmouseout="this.style.backgroundColor='#10E0E0'; this.style.color='black'; this.style.transform='scale(1.0)';">
+                    Book Consultation
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="py-4 w-full" style="background-color: #FAFFFF;">
+        </div>
+        
+        <!-- Compounding -->
+
+        <div class="max-w-screen-xl mx-auto px-4 md:px-24 py-8 w-full flex flex-col">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-6">Learn more about compounding savings</h2>
+            <div class="relative">
+                <img src="/images/youtube.png" alt="YouTube Thumbnails" class="object-contain w-full md:w-1/2 h-auto rounded-lg">
+            </div>
+            <div class="w-full justify-center flex my-8">
+                <button class="font-semibold text-base font-normal text-gray-700 py-2 px-4 rounded-l-md rounded-tr-none rounded-br-md" style="background-color: #10E0E0; color: black; padding: 8px 16px; transition: background-color 0.3s, transform 0.3s;"
+                onmouseover="this.style.backgroundColor='black'; this.style.color='#10E0E0'; this.style.transform='scale(1.1)';"
+                onmouseout="this.style.backgroundColor='#10E0E0'; this.style.color='black'; this.style.transform='scale(1.0)';">
+                Watch on Youtube
+            </button>
+            
+            </div>
+        </div>
+        <div class="py-4" style="background-color: #FAFFFF;">
+        </div>
+        
+      <!-- Calculator -->
+
+      <div class="max-w-screen-xl mx-auto px-4 md:px-24 py-8">
+        <h2 class="text-2xl font-semibold text-gray-800 text-lg mb-6">Calculators</h2>
+        <ul class="list-none space-y-2">
+            <li class="text-gray-700 text-base" style="color: #10E0E0">Stock Investment Calculator</li>
+            <li class="text-gray-700 text-base">Compound Savings Calculator</li>
+            <li class="text-gray-700 text-base">Stock Investment Calculator</li>
+            <li class="text-gray-700 text-base">Stock Investment Calculator</li>
+        </ul>
+    </div>
+    <div class="py-4" style="background-color: #FAFFFF;">
+    </div>
+    
+
+        <!-- Results div -->
+        <div class="container-fluid results-div home-nav-bg-white p-0 c" id="earnings-div">
+            <div class="grid-container-result-div p-0">
+                <div class="grid-item-result-div1 desktop b">
+                    <div class="disclaimer-holder">
+                        <div class="container-fluid disclaimer-div p-0 c">
+                            <h5>Disclaimer</h5>
+                            <p>
+                                Our investor's calculator is designed to provide guidance on potential investment returns. It is essential to understand that this tool serves as a guide.
+                            </p>
+
+                            <p class="last-p">
+                                After using the calculator to assess rates and returns, we recommend booking a consultation with us for a comprehensive and detailed discussion tailored to your specific investment needs.
+                            </p>
+
+                            <a href="book-consultation.html">
+                                <button class="filled-btn-lg">Book Consultation</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-item-result-div2 b">
+                    <div class="container-fluid form-details c" style="background: #F3FDFD;">
+                        <div class="container-fluid earnings-div p-0">
+                            <div class="style-form form-mb">
+                              <label class="form-label">Initial Deposit</label>
+                              <input type="text" class="form-control" id="initial_deposit">
+                            </div>
+
+                            <div class="style-form form-mb">
+                              <label class="form-label">Total Interest Paid</label>
+                              <input type="text" class="form-control" id="total_interest_paid">
+                            </div>
+
+                            <div class="style-form form-mb">
+                              <label class="form-label">Total Return</label>
+                              <input type="text" class="form-control" id="total_return">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Appears only on phone -->
+                <div class="grid-item-result-div1 phone b">
+                    <div class="disclaimer-holder">
+                        <div class="container-fluid disclaimer-div p-0 c">
+                            <h5>Disclaimer</h5>
+                            <p>
+                                Our investor's calculator is designed to provide guidance on potential investment returns. It is essential to understand that this tool serves as a guide.
+                            </p>
+
+                            <p class="last-p">
+                                After using the calculator to assess rates and returns, we recommend booking a consultation with us for a comprehensive and detailed discussion tailored to your specific investment needs.
+                            </p>
+
+                            <a href="book-consultation.html">
+                                <button class="filled-btn-lg">Book Consultation</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Learn more  -->
+        <div class="container-fluid learn-compound-div div-padding home-nav-bg-green a" id="earnings-div2">
+            <div class="learn-video-holder b">
+                <h5>Learn more about compounding savings</h5>
+
+                <iframe src="https://www.youtube.com/embed/gyiiqUQgEeA?si=lqpbNwDjbN-zmzqC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+                <a href="https://www.youtube.com/embed/gyiiqUQgEeA?si=lqpbNwDjbN-zmzqC" target="_Blank">
+                    <button class="filled-btn-lg ">
+                        Watch on YouTube
+                    </button>
+                </a>
+            </div>
+        </div>
+
+		
+	</main>
+
+
+    <footer class="container-fluid footer-div mb-0 bg-sec">
+        <div class="container-fluid first-div c">
+            <div class="row div-padding">
+                <div class="col-lg-5 col-md-4 col-sm-12 p-0 mb-4 a">
+                    <div class="footer-logo">
+                        <a href="index.html">
+                            <img src="images/logo/y.png" class="img-fluid logo-footer" alt="Brillianzhub logo" >
+                        </a>
+
+                        <p>
+                            Brillianzhub is a leading financial services <br class="desktop">firm specializing in real estate, stocks, and <br class="desktop">personalized financial coaching.
+                        </p>
+
+                        <div class="socials-media desktop">
+                            <a href="">
+                                <img src="icons/facebook.svg" class="img-fluid" alt="Brillianzhub on facebook">
+                            </a>
+
+                            <a href="">
+                                <img src="icons/instagram.svg" class="img-fluid" alt="Brillianzhub on instagram">
+                            </a>
+
+                            <a href="">
+                                <img src="icons/x.svg" class="img-fluid" alt="Brillianzhub on x">
+                            </a>
+
+                            <a href="">
+                                <img src="icons/linkedin.svg" class="img-fluid" alt="Brillianzhub on linkedin">
+                            </a>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-12 mb-4 p-0 b">
+                    <div class="footer-links fg">
+                        <h6>Company</h6>
+                        <ul>
+                            <li>
+                                <a href="about.html">About</a>
+                            </li>
+
+                            <li>
+                                <a href="services.html">Services</a>
+                            </li>
+                            
+                            <li>
+                                <a href="resources.html">Resources</a>
+                            </li>
+                            
+                            <li>
+                                <a href="investments.html">Investment Packages</a>
+                            </li>
+                            
+                            <li>
+                                <a href="calculator.html">Financial Calculator</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-12 mb-4 p-0 c">
+                    <div class="footer-links">
+                        <h6>Contact</h6>
+                        <p>
+                            <img src="icons/venue.svg" class="img-fluid">&nbsp;
+                            Borsigstr. 5, Feuerbach, Stuttgart, Germany.
+                        </p>
+
+                        <p class="p-0">
+                            <a href="mailto:brillianzhub@gmail.com">
+                                <img src="icons/at.svg" class="img-fluid">&nbsp;
+                                brillianzhub@gmail.com
+                            </a>
+                            
+                        </p>
+
+                        <p class="p-0 phone-number-link">
+                            <a href="tel:+49 1590 4976605">
+                                <img src="icons/phone.svg" class="img-fluid">&nbsp;
+                                +49 1590 4976605
+                            </a>
+                        </p>
+
+
+                        <div class="socials-media phone">
+                            <a href="">
+                                <img src="icons/facebook.svg" class="img-fluid" alt="Brillianzhub on facebook">
+                            </a>
+
+                            <a href="">
+                                <img src="icons/instagram.svg" class="img-fluid" alt="Brillianzhub on instagram">
+                            </a>
+
+                            <a href="">
+                                <img src="icons/x.svg" class="img-fluid" alt="Brillianzhub on x">
+                            </a>
+
+                            <a href="">
+                                <img src="icons/linkedin.svg" class="img-fluid" alt="Brillianzhub on linkedin">
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Copywrite Div -->
+        <div class="container-fluid copywrite-div p-0 b">
+            <div class="container-fluid">
+                <div class="row div-padding ">
+                    <div class="col-lg-5 col-md-5 col-sm-12 p-0 copy-div c">
+                        <p>Copyright &copy Brillianzhub 2023.&nbsp;  All Rights Reserved</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Menu Modal -->
+    <div class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen menuModal">
+        <div class="modal-content home-nav-bg-white">
+          <div class="modal-header vnav">
+            <h5 class="modal-title" id="exampleModalLabel">
+                <a href="index.html"><img src="images/logo/logoMenu.png" alt="Brillianzhub logo" class="phone-header-logo"></a>
+            </h5>
+
+            <img src="icons/menu_cancel.svg" class="img-fluid nav__icon" data-bs-dismiss="modal" aria-label="Close">
+          </div>
+          <div class="modal-body p-0">
+                <ul>
+                    <li class="active-link">
+                        <a href="about.html" class="active-page">
+                            About
+                            <img src="icons/arrow_right.svg" class="alignright">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="courses.html">
+                            Courses
+                            <img src="icons/arrow_right.svg" class="alignright">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="investments.html">
+                            Investments
+                            <img src="icons/arrow_right.svg" class="alignright">
+                        </a>
+                    </li>
+                    <li>
+                        <a onclick="showCourses()">
+                            Calculator
+                            <img src="icons/arrow_right.svg" class="alignright" id="dropdown-arrow" name="1">
+                        </a>
+                        <div id="course-link-div">
+                            <a href="compound-calculator.html">
+                                Compound Savings Calculator
+                                <img src="icons/arrow_right.svg" class="alignright">
+                            </a>
+
+                            <a href="stock-calculator.html">
+                                Stock Investment Calculator
+                                <img src="icons/arrow_right.svg" class="alignright">
+                            </a>
+                            
+                            <a href="real-estate-calculator.html">
+                                Real Estate Calculator
+                                <img src="icons/arrow_right.svg" class="alignright">
+                            </a>
+                            
+                        </div>
+                    </li>
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                            <img src="icons/arrow_right.svg" class="alignright">
+                        </a>
+                    </li>
+                </ul>
+
+                <center>
+                    <a href="signin.html">
+                        <button class="filled-btn-lg phone-nav-btn">My Account</button>
+                    </a>
+                </center>
+          </div>
+        </div>
+      </div>
+    </div>
+
+	<script type="text/javascript" src="js/ha.js"></script>
+	<script src="bootstrap-5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  
+</body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var ctx = document.getElementById('stockGraph').getContext('2d');
+    var stockGraph = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['2023-03', '2023-05', '2023-07', '2023-09', '2023-11', '2024-01'],
+            datasets: [{
+                label: 'Price of Stock vs Time',
+                data: [120, 140, 100, 130, 115, 150],
+                borderColor: 'gray', // Adjust the line color to match the original
+                borderWidth: 2,
+                backgroundColor: 'transparent',
+                fill: false,
+                tension: 0.4, // Adjust this for smoother or sharper curves
+                pointRadius: 5, // Adjust point size to match the original
+                pointBackgroundColor: 'gray', // Match point color
+                pointBorderColor: '#fff',
+                pointBorderWidth: 2
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: false,
+                    padding: 50,
+                    ticks: {
+                        padding: 20 // Adds padding to y-axis ticks
+                    },
+                    grid: {
+                        drawBorder: true,
+                        color: 'lightgrey', // Adjust grid color to match the original
+                        borderDash: [5, 5], // Add dashed lines if present in original
+                        drawOnChartArea: true
+                    },
+                    ticks: {
+                        stepSize: (200 - 80) / 5
+                    }
+                },
+                x: {
+                    grid: {
+                        drawOnChartArea: false // Adjust whether to show grid lines for x-axis
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    display: true // Adjust based on whether a legend is wanted
+                },
+                tooltip: {
+                    enabled: true // Enable or disable tooltips
+                }
+            }
+        }
+    });
+});
+</script>
+</html>

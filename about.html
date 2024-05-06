@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="Brillianzhub">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="images/logo/favicon.png">
+    <!--Font awsome-->
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+    <!--Proxima Nova now Font-->
+    <link rel="stylesheet" href="font/stylesheet.css">
+
+     <!-- Bootstrap CSS -->
+    <link href="bootstrap-5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  	<link rel="stylesheet" href="stylesheet/style.css?v=0" type="text/css">
+  	<link rel="stylesheet" href="stylesheet/media.css?v=0" type="text/css">
+
+	<title>Brillianzhub</title>
+</head>
+<body onload="howItWorks()">
+	<!-- Navigation bar -->
+	<header class="fixed-top a">
+		<nav class="container-fluid div-padding home-nav-bg-white desktop main-nav b">
+			<a href="index.html">
+				<img src="images/logo/dnav_logo.png" alt="Brillianzhub logo" class="img-fluid nav-logo b">
+			</a>
+
+			<div class="nav-links c">
+				<ul>
+					<li>
+						<a href="about.html" class="active-page">About</a>
+					</li>
+					<li>
+						<a href="courses.html">Courses</a>
+					</li>
+					<li>
+						<a href="investments.html">Investments</a>
+					</li>
+                    <li>
+                        <div class="dropdown">
+                          <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            Calculator
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li>
+                                <a class="dropdown-item" href="compound-calculator.html">
+                                    <img src="icons/nav-money.svg" class="img-fluid icon-course">&nbsp;
+                                    <span>Compound Savings Calculator</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="stock-calculator.html">
+                                    <img src="icons/nav-stock.svg" class="img-fluid icon-course">&nbsp;
+                                    <span>Stock Investment Calculator</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="real-estate-calculator.html">
+                                    <img src="icons/nav-investment.svg" class="img-fluid icon-course">&nbsp;
+                                    <span>Real Estate Investment Calculator</span>
+                                </a>
+                            </li>
+                          </ul>
+                        </div>
+                    </li>
+					<li>
+						<a href="contact.html">Contact</a>
+					</li>
+					<li class="btn-link">
+						<a href="signin.html" class="account_btn">My Account
+						</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+	    <div class="header phone">
+	        <nav class="vnav home-nav-bg-white">
+	            <a href="index.html">
+	                <img src="images/logo/logoMenu.png" alt="Brillianzhub logo" class="phone-header-logo">
+	            </a>
+
+	            <a href="" data-bs-toggle="modal" data-bs-target="#menuModal">
+	                <img src="icons/menu.svg" class="nav__icon">
+	            </a>
+	        </nav>
+	    </div>
+	</header>
+
+	<main class="main">
+        <!-- Hero -->
+        <div class="container-fluid about-banner div-padding bottom-margin home-nav-bg-white c">
+            <div class="grid-container-about-banner b">
+                <div class="container-fluid about-div-info a">
+                    <h2>About Brillianzhub</h2>
+                    <p class="info-p">
+                        At Brillianzhub, we strive to be your trusted partner in securing your financial future.
+                    </p>
+                    <p>
+                        With our comprehensive approach to real estate, stocks, and financial coaching, we provide tailored solutions that enable you to make informed investment decisions, grow your wealth, and achieve long-term financial success.
+                    </p>
+                </div>
+
+                <div class="hero-img p-0">
+                    <img src="images/lady_coffee.png" class="img-fluid">
+                </div>
+            </div>
+        </div>
+
+        <!-- Lesson Counter -->
+        <div class="container-fluid users-counter-holder div-padding bottom-margin">
+            <div class="container-fluid grid-users-counter bg-dark-blue">
+                <div class="grid-item-users">
+                    <h5>40+</h5>
+                    <p>Lessons on <br>investments</p>
+                </div>
+                
+                <div class="grid-item-users">
+                    <h5>40+</h5>
+                    <p>Lessons on <br>investments</p>
+                </div>
+                
+                <div class="grid-item-users">
+                    <h5>40+</h5>
+                    <p>years of <br>experience</p>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- Testimonials -->
+        <div class="container-fluid testimonial-holder1 div-padding bottom-margin b">
+            <div class="grid-container-testimonial">
+                <div class="testimonial-hold-div p-0 b">
+                    <div class="container-fluid testimonial-holder bg-dark-blue">
+                        <h5>Testimonials</h5>
+                        <div class="container-fluid testimonial-holder-div p-0">
+                            <div class="quote-div alignleft">
+                                <!-- <h1>&#34;</h1> -->
+                                <img src="images/comma.png" class="img-fluid">
+                            </div>
+
+                            <div class="testimony home-nav-bg-green alignright">
+                                <div class="myTestimony p-0">
+                                    <p>
+                                        Your courses have been an incredible resource for me. With clear, insightful guidance, I've gained a deeper understanding of real estate and stock investments. The practical knowledge I've acquired has empowered me to make informed financial decisions with confidence.<br><br>
+
+                                        Thank you for equipping me with the tools to navigate the complexities of the investment world
+                                    </p>
+
+                                    <h6>Alex Johnson</h6>
+                                </div>
+
+                                <div class="myTestimony p-0">
+                                    <p>
+                                        The practical knowledge I've acquired has empowered me to make informed financial decisions with confidence.<br><br>
+
+                                        Thank you for equipping me with the tools to navigate the complexities of the investment world
+                                    </p>
+
+                                    <h6>Musa Johnson</h6>
+                                </div>
+                                
+                                <div class="myTestimony p-0">
+                                    <p>
+                                        Your courses have been an incredible resource for me. With clear, insightful guidance, I've gained a deeper understanding of real estate and stock investments. The practical knowledge I've acquired has empowered me to make informed financial decisions with confidence.<br><br>
+
+                                        Thank you for equipping me with the tools to navigate the complexities of the investment world
+                                    </p>
+
+                                    <h6>Uba Johnson</h6>
+                                </div>
+
+
+
+
+                                <!-- This is the control buttons -->
+                                <center class="mb-0">
+                                    <div class="slider-icons-div p-0">
+                                        <img class="img-fluid dot-icon" onclick="currentSlide(1)">
+                                        <img class="img-fluid dot-icon"onclick="currentSlide(2)">
+                                        <img class="img-fluid dot-icon"onclick="currentSlide(3)">
+                                    </div>
+                                </center>
+                            </div>
+                            <div class="clr"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-hold-div p-0 desktop b">
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Meet the team -->
+        <div class="container-fluid team-div-holder div-padding bottom-margin team-mb b">
+            <h2>Meet the team</h2>
+            <div class="grid-container-team p-0 c">
+                <div class="container-fluid team-member team-member1">
+                    <!-- <img src="images/boy.jpg" class="img-fluid alignleft"> -->
+                    <div class="member-info home-nav-bg-white">
+                        <h5>John Doe</h5>
+                        <h6>Chief Executive Officer</h6>
+                    </div>
+                    <div class="clr"></div>
+                </div>
+
+                <div class="container-fluid team-member team-member1">
+                    <!-- <img src="images/boy.jpg" class="img-fluid alignleft"> -->
+                    <div class="member-info home-nav-bg-white">
+                        <h5>John Doe</h5>
+                        <h6>Chief Executive Officer</h6>
+                    </div>
+                    <div class="clr"></div>
+                </div>
+
+                <div class="container-fluid team-member team-member1">
+                    <!-- <img src="images/boy.jpg" class="img-fluid alignleft"> -->
+                    <div class="member-info home-nav-bg-white">
+                        <h5>John Doe</h5>
+                        <h6>Chief Executive Officer</h6>
+                    </div>
+                    <div class="clr"></div>
+                </div>
+                
+                <div class="container-fluid team-member team-member1">
+                    <!-- <img src="images/boy.jpg" class="img-fluid alignleft"> -->
+                    <div class="member-info home-nav-bg-white">
+                        <h5>John Doe</h5>
+                        <h6>Chief Executive Officer</h6>
+                    </div>
+                    <div class="clr"></div>
+                </div>
+            </div>
+
+            <center>
+                <div class="p-0" id="about_btn">
+                    <button class="out-fill-btn about-btn" onclick="viewTeamMembers()">
+                        View More 
+                        <img src="icons/arrow_down_about.svg">
+                    </button>
+                </div>
+            </center>
+
+            <div class="grid-container-team p-0 c" id="team-members">
+                <div class="container-fluid team-member team-member1">
+                    <!-- <img src="images/boy.jpg" class="img-fluid alignleft"> -->
+                    <div class="member-info home-nav-bg-white">
+                        <h5>John Doe</h5>
+                        <h6>Chief Executive Officer</h6>
+                    </div>
+                    <div class="clr"></div>
+                </div>
+
+                <div class="container-fluid team-member team-member1">
+                    <!-- <img src="images/boy.jpg" class="img-fluid alignleft"> -->
+                    <div class="member-info home-nav-bg-white">
+                        <h5>John Doe</h5>
+                        <h6>Chief Executive Officer</h6>
+                    </div>
+                    <div class="clr"></div>
+                </div>
+
+                <div class="container-fluid team-member team-member1">
+                    <!-- <img src="images/boy.jpg" class="img-fluid alignleft"> -->
+                    <div class="member-info home-nav-bg-white">
+                        <h5>John Doe</h5>
+                        <h6>Chief Executive Officer</h6>
+                    </div>
+                    <div class="clr"></div>
+                </div>
+                
+                <div class="container-fluid team-member team-member1">
+                    <!-- <img src="images/boy.jpg" class="img-fluid alignleft"> -->
+                    <div class="member-info home-nav-bg-white">
+                        <h5>John Doe</h5>
+                        <h6>Chief Executive Officer</h6>
+                    </div>
+                    <div class="clr"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- How our consultation works -->
+        <div class="container-fluid consultation-div-holder div-padding b">
+            <h2>How our <br class="phone">consultation works</h2>
+            <p>
+                Get tailored guidance and personalized strategies for  <br class="desktop">your financial success in these four simple steps:
+            </p>
+
+            <div class="container-fluid consultation-div p-0">
+                <div class="grid-container-consultation">
+                    <div class="instruction-div instruct-highlight">
+                        <h5>Free Initial consultation</h5>
+                        <p>
+                            During our introductory meeting, we attentively listen to your financial goals, current situation, and career aspirations.
+                        </p>
+                    </div>
+
+                    <div class="instruction-div">
+                        <h5> Discover our approach and services</h5>
+                        <p>
+                            Explore our company's services, operational methods, pricing, and important disclaimers.
+                        </p>
+                    </div>
+
+                    <div class="instruction-div">
+                        <h5>Contract signing</h5>
+                        <p>
+                            Proceed with the signing of the contract.
+                        </p>
+                    </div>
+
+                    <div class="instruction-div">
+                        <h5>Coaching commences</h5>
+                        <p>
+                            Personal/team coaching classes and exercises commence.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Bootom arrows -->
+                <div class="container-fluid desktop p-0">
+                        <img src="icons/aboutpage_arrow.svg" class="img-fluid about-arrow" id="arrow1">
+                        <img src="icons/aboutpage_arrow.svg" class="img-fluid about-arrow arrowl" id="arrow2">
+                        <img src="icons/aboutpage_arrow.svg" class="img-fluid about-arrow arrowl" id="arrow3">
+                </div>
+            </div>
+
+            <center>
+                <!-- calendly link -->
+                <a href="">
+                    <button class="filled-btn-lg">
+                        Book Your Consultation Now
+                    </button>
+                </a>
+            </center>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+	</main>
+
+
+    <footer class="container-fluid footer-div mb-0 bg-sec">
+        <div class="container-fluid first-div c">
+            <div class="row div-padding">
+                <div class="col-lg-5 col-md-4 col-sm-12 p-0 mb-4 a">
+                    <div class="footer-logo">
+                        <a href="index.html">
+                            <img src="images/logo/y.png" class="img-fluid logo-footer" alt="Brillianzhub logo" >
+                        </a>
+
+                        <p>
+                            Brillianzhub is a leading financial services <br class="desktop">firm specializing in real estate, stocks, and <br class="desktop">personalized financial coaching.
+                        </p>
+
+                        <div class="socials-media desktop">
+                            <a href="">
+                                <img src="icons/facebook.svg" class="img-fluid" alt="Brillianzhub on facebook">
+                            </a>
+
+                            <a href="">
+                                <img src="icons/instagram.svg" class="img-fluid" alt="Brillianzhub on instagram">
+                            </a>
+
+                            <a href="">
+                                <img src="icons/x.svg" class="img-fluid" alt="Brillianzhub on x">
+                            </a>
+
+                            <a href="">
+                                <img src="icons/linkedin.svg" class="img-fluid" alt="Brillianzhub on linkedin">
+                            </a>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-12 mb-4 p-0 b">
+                    <div class="footer-links fg">
+                        <h6>Company</h6>
+                        <ul>
+                            <li>
+                                <a href="about.html">About</a>
+                            </li>
+
+                            <li>
+                                <a href="services.html">Services</a>
+                            </li>
+                            
+                            <li>
+                                <a href="resources.html">Resources</a>
+                            </li>
+                            
+                            <li>
+                                <a href="investments.html">Investment Packages</a>
+                            </li>
+                            
+                            <li>
+                                <a href="calculator.html">Financial Calculator</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-12 mb-4 p-0 c">
+                    <div class="footer-links">
+                        <h6>Contact</h6>
+                        <p>
+                            <img src="icons/venue.svg" class="img-fluid">&nbsp;
+                            Borsigstr. 5, Feuerbach, Stuttgart, Germany.
+                        </p>
+
+                        <p class="p-0">
+                            <a href="mailto:brillianzhub@gmail.com">
+                                <img src="icons/at.svg" class="img-fluid">&nbsp;
+                                brillianzhub@gmail.com
+                            </a>
+                            
+                        </p>
+
+                        <p class="p-0 phone-number-link">
+                            <a href="tel:+49 1590 4976605">
+                                <img src="icons/phone.svg" class="img-fluid">&nbsp;
+                                +49 1590 4976605
+                            </a>
+                        </p>
+
+
+                        <div class="socials-media phone">
+                            <a href="">
+                                <img src="icons/facebook.svg" class="img-fluid" alt="Brillianzhub on facebook">
+                            </a>
+
+                            <a href="">
+                                <img src="icons/instagram.svg" class="img-fluid" alt="Brillianzhub on instagram">
+                            </a>
+
+                            <a href="">
+                                <img src="icons/x.svg" class="img-fluid" alt="Brillianzhub on x">
+                            </a>
+
+                            <a href="">
+                                <img src="icons/linkedin.svg" class="img-fluid" alt="Brillianzhub on linkedin">
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Copywrite Div -->
+        <div class="container-fluid copywrite-div p-0 b">
+            <div class="container-fluid">
+                <div class="row div-padding ">
+                    <div class="col-lg-5 col-md-5 col-sm-12 p-0 copy-div c">
+                        <p>Copyright &copy Brillianzhub 2023.&nbsp;  All Rights Reserved</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Menu Modal -->
+    <div class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen menuModal">
+        <div class="modal-content home-nav-bg-white">
+          <div class="modal-header vnav">
+            <h5 class="modal-title" id="exampleModalLabel">
+                <a href="index.html"><img src="images/logo/logoMenu.png" alt="Brillianzhub logo" class="phone-header-logo"></a>
+            </h5>
+
+            <img src="icons/menu_cancel.svg" class="img-fluid nav__icon" data-bs-dismiss="modal" aria-label="Close">
+          </div>
+          <div class="modal-body p-0">
+                <ul>
+                    <li class="active-link">
+                        <a href="about.html" class="active-page">
+                            About
+                            <img src="icons/arrow_right.svg" class="alignright">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="courses.html">
+                            Courses
+                            <img src="icons/arrow_right.svg" class="alignright">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="investments.html">
+                            Investments
+                            <img src="icons/arrow_right.svg" class="alignright">
+                        </a>
+                    </li>
+                    <li>
+                        <a onclick="showCourses()">
+                            Calculator
+                            <img src="icons/arrow_right.svg" class="alignright" id="dropdown-arrow" name="1">
+                        </a>
+                        <div id="course-link-div">
+                            <a href="compound-calculator.html">
+                                Compound Savings Calculator
+                                <img src="icons/arrow_right.svg" class="alignright">
+                            </a>
+
+                            <a href="stock-calculator.html">
+                                Stock Investment Calculator
+                                <img src="icons/arrow_right.svg" class="alignright">
+                            </a>
+                            
+                            <a href="real-estate-calculator.html">
+                                Real Estate Calculator
+                                <img src="icons/arrow_right.svg" class="alignright">
+                            </a>
+                            
+                        </div>
+                    </li>
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                            <img src="icons/arrow_right.svg" class="alignright">
+                        </a>
+                    </li>
+                </ul>
+
+                <center>
+                    <a href="signin.html">
+                        <button class="filled-btn-lg phone-nav-btn">My Account</button>
+                    </a>
+                </center>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+        //window.onscroll = function() {myalert()};
+
+
+
+        let slideIndex = 0;
+        showSlides();
+        function currentSlide(n) {
+            alert(n);
+            //showSlides(slideIndex = n);
+        }
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("myTestimony");
+            let dot_icon = document.getElementsByClassName("dot-icon");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+                dot_icon[i].src = "icons/slide-icon-inactive.svg";
+                if(i == (slides.length -1)){
+                    dot_icon[i].src = "icons/slide-icon-small.svg";
+                }
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            dot_icon[slideIndex-1].src = "icons/slide-icon-active.svg";
+            setTimeout(showSlides, 5000); // Change image every 2 seconds
+        } 
+    </script>
+
+	<script type="text/javascript" src="js/ha.js"></script>
+	<script src="bootstrap-5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Brillianzhub">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/logo/favicon.png">
+    <!--Font awsome-->
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
+
+    <!--Proxima Nova now Font-->
+    <link rel="stylesheet" href="../font/stylesheet.css">
+
+     <!-- Bootstrap CSS -->
+    <link href="../bootstrap-5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.js"></script>
+
+    <link rel="stylesheet" href="../stylesheet/style.css?v=0" type="text/css">
+    <link rel="stylesheet" href="../stylesheet/media.css?v=0" type="text/css">
+
+    <title>Brillianzhub</title>
+</head>
+<body onload="sliderStartup()">
+    <!-- Navigation bar -->
+    <header class="fixed-top a">
+        <nav class="container-fluid div-padding home-nav-bg-white desktop main-nav b">
+            <a href="../index.html">
+                <img src="../images/logo/dnav_logo.png" alt="Brillianzhub logo" class="img-fluid nav-logo b">
+            </a>
+
+            <div class="nav-links c">
+                <ul>
+                    <li>
+                        <a href="../about.html" class="active-page">About</a>
+                    </li>
+                    <li>
+                        <a href="../courses.html">Courses</a>
+                    </li>
+                    <li>
+                        <a href="../investments.html">Investments</a>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                          <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            Calculator
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li>
+                                <a class="dropdown-item" href="../compound-calculator.html">
+                                    <img src="../icons/nav-money.svg" class="img-fluid icon-course">&nbsp;
+                                    <span>Compound Savings Calculator</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="../stock-calculator.html">
+                                    <img src="../icons/nav-stock.svg" class="img-fluid icon-course">&nbsp;
+                                    <span>Stock Investment Calculator</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="../real-estate-calculator.html">
+                                    <img src="../icons/nav-investment.svg" class="img-fluid icon-course">&nbsp;
+                                    <span>Real Estate Investment Calculator</span>
+                                </a>
+                            </li>
+                          </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="../contact.html">Contact</a>
+                    </li>
+                    <li class="btn-link">
+                        <a href="admin-dashboard-login.html" class="account_btn">My Account
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="header phone">
+            <nav class="vnav home-nav-bg-white">
+                <a href="../index.html">
+                    <img src="../images/logo/logoMenu.png" alt="Brillianzhub logo" class="phone-header-logo">
+                </a>
+
+                <a href="" data-bs-toggle="modal" data-bs-target="#menuModal">
+                    <img src="../icons/menu.svg" class="nav__icon">
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main no-main">
+        <div class="container-fluid courses2-div-house home-nav-bg-green p-0 c">
+            <div class="grid-container-courses3-div">
+                <div class="partition courses-list-div-holder course-top-padding home-nav-bg-white desktop b">
+                    <div class="container-fluid courses-list-div p-0 a">
+                        <h2>Admin</h2>
+                        <div class="accordion accordion-flushe" id="accordionFlushExample">
+                            <ul class="accordion-ul">
+                                <li class="active-course">
+                                    <a href="admin-dashboard-courses-home.html">Courses</a>
+                                </li>
+
+                                <li>
+                                    <a href="admin-dashboard-investments-home.html">Investments</a>
+                                </li>
+
+                                <li>
+                                    <a href="admin-dashboard-blog-home.html">Blog</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="partition courses-container-div course-top-padding b">
+                    <div class="container-fluid courses-overview-div admin-content alt-div a">
+                        <!-- Contents -->
+                        <div class="dropdown module-btn">
+                            <button class="btn p-0 searchFilter dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                                Lesson Details
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                <li>
+                                    <span id="body_text" class="dropdown-item">Add body text</span>
+                                </li>
+
+                                <li>
+                                    <span id="body_img" class="dropdown-item">Add body image</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <form action="admin-dashboard-lesson-preview.html" method="post">
+                            <div class="p-0" id="formAdd">
+                                <div class="container-fluid home-nav-bg-white rounded-edges admin-mb b">
+                                    <div class="form-group style-form mb-3">
+                                        <label>Title</label>
+                                        <div class="grid-container-edit">
+                                            <input type="text" name="title" class="form-control" value="Understanding income and expenses">
+
+                                            <div class="edit-div">
+                                                <img src="../icons/edit.svg" class="img-fluid edit-icon">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="container-fluid home-nav-bg-white rounded-edges file-upload-holder admin-mb b">
+                                    <div class="form-group style-form mb-3">
+                                        <label class="mb-3">Hero image</label>
+                                        <center>
+                                            <div class="drag-area p-0" id="dropContainer1">
+                                                <div class="icon">
+                                                    <img src="../icons/photo.svg" class="img-fluid">
+                                                </div>
+                                                <header>Drag & Drop to Upload File or</header>
+                                                
+                                                <button type="button">Upload image here</button>
+                                                <input type="file" name="file1[]" id="fileInput1" hidden>
+                                            </div>
+                                        </center>
+                                    </div>
+                                </div>
+
+                                <div class="container-fluid home-nav-bg-white rounded-edges admin-mb b">
+                                    <div class="form-group style-form mb-3">
+                                        <label>Body text:</label>
+                                        <div class="grid-container-edit">
+                                            <textarea name="body_text[]" class="form-control" id="default1" rows="5">
+                                                Taking charge of your personal finances is an essential step toward securing a stable financial future. Start by creating a detailed budget that encompasses your monthly income and expenses. Tracking your spending habits helps you identify areas where you might be overspending, enabling you to make necessary adjustments and allocate more resources toward your savings and investments.
+                                                <br>
+                                                  Setting clear financial goals is another vital aspect of effective financial management. Whether you're saving for retirement, planning a major purchase, or building an emergency fund, establishing tangible objectives provides you with a roadmap for your financial journey. It's crucial to regularly assess and readjust these goals as your financial situation evolves over time.
+                                                  <br>
+                                                  Developing a strategic plan to achieve your financial objectives is equally important. Consider the various investment options available to you, such as stocks, bonds, mutual funds, and real estate, and explore which ones align best with your risk tolerance and long-term aspirations. Diversifying your investment portfolio can help mitigate potential risks and maximize your returns over time.
+                                            </textarea>
+
+                                            <div class="edit-div">
+                                                <img src="../icons/edit.svg" class="img-fluid edit-icon">
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+
+                                <div class="container-fluid home-nav-bg-white rounded-edges admin-mb b">
+                                    <div class="form-group style-form p-0 mb-3">
+                                        <label>Body image</label>
+                                        <div class="grid-container-edit">
+                                            <div class="lesson-imgs p-0">
+                                                <div class="dropdown number_img-btn">
+                                                    Number of images: <button class="btn p-0 searchFilter dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        1
+                                                    </button>
+                                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                                        <li>
+                                                            <span class="dropdown-item">1</span>
+                                                        </li>
+                                                        <li>
+                                                            <span class="dropdown-item">2</span>
+                                                        </li>
+
+                                                        <li>
+                                                            <span class="dropdown-item">3</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                <img src="../images/manlaptopM.png" class="img-fluid">
+                                                <img src="../images/manlaptopM.png" class="img-fluid">
+                                            </div>
+
+                                            <div class="edit-div">
+                                                <img src="../icons/edit.svg" class="img-fluid edit-icon">
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+
+                                <div class="container-fluid home-nav-bg-white rounded-edges admin-mb b">
+                                    <div class="form-group style-form mb-3">
+                                        <label>Body text:</label>
+                                        <div class="grid-container-edit">
+                                            <textarea name="body_text[]" class="form-control" id="default2" rows="5">
+                                                Taking charge of your personal finances is an essential step toward securing a stable financial future. Start by creating a detailed budget that encompasses your monthly income and expenses. Tracking your spending habits helps you identify areas where you might be overspending, enabling you to make necessary adjustments and allocate more resources toward your savings and investments.
+                                                <br>
+                                                  Setting clear financial goals is another vital aspect of effective financial management. Whether you're saving for retirement, planning a major purchase, or building an emergency fund, establishing tangible objectives provides you with a roadmap for your financial journey. It's crucial to regularly assess and readjust these goals as your financial situation evolves over time.
+                                                  <br>
+                                                  Developing a strategic plan to achieve your financial objectives is equally important. Consider the various investment options available to you, such as stocks, bonds, mutual funds, and real estate, and explore which ones align best with your risk tolerance and long-term aspirations. Diversifying your investment portfolio can help mitigate potential risks and maximize your returns over time.
+                                            </textarea>
+
+                                            <div class="edit-div">
+                                                <img src="../icons/edit.svg" class="img-fluid edit-icon">
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <p class="text-end mt-5">
+                                <button type="submit" class="filled-btn-lg ">Preview Changes</button>
+                            </p>
+                        </form>
+                        
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        
+    </main>
+
+
+    
+    <!-- Menu Modal -->
+    <div class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen menuModal">
+        <div class="modal-content home-nav-bg-white">
+          <div class="modal-header vnav">
+            <h5 class="modal-title" id="exampleModalLabel">
+                <a href="../index.html"><img src="../images/logo/logoMenu.png" alt="Brillianzhub logo" class="phone-header-logo"></a>
+            </h5>
+
+            <img src="../icons/menu_cancel.svg" class="img-fluid nav__icon" data-bs-dismiss="modal" aria-label="Close">
+          </div>
+          <div class="modal-body p-0">
+                <ul>
+                    <li class="active-link">
+                        <a href="../about.html" class="active-page">
+                            About
+                            <img src="../icons/arrow_right.svg" class="alignright">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../courses.html">
+                            Courses
+                            <img src="../icons/arrow_right.svg" class="alignright">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../investments.html">
+                            Investments
+                            <img src="../icons/arrow_right.svg" class="alignright">
+                        </a>
+                    </li>
+                    <li>
+                        <a onclick="showCourses2()">
+                            Calculator
+                            <img src="../icons/arrow_right.svg" class="alignright" id="dropdown-arrow" name="1">
+                        </a>
+                        <div id="course-link-div">
+                            <a href="../compound-calculator.html">
+                                Compound Savings Calculator
+                                <img src="../icons/arrow_right.svg" class="alignright">
+                            </a>
+
+                            <a href="../stock-calculator.html">
+                                Stock Investment Calculator
+                                <img src="../icons/arrow_right.svg" class="alignright">
+                            </a>
+                            
+                            <a href="../real-estate-calculator.html">
+                                Real Estate Calculator
+                                <img src="../icons/arrow_right.svg" class="alignright">
+                            </a>
+                            
+                        </div>
+                    </li>
+                    <li>
+                        <a href="../contact.html">
+                            Contact
+                            <img src="../icons/arrow_right.svg" class="alignright">
+                        </a>
+                    </li>
+                </ul>
+
+                <center>
+                    <a href="admin-dashboard-login.html">
+                        <button class="filled-btn-lg phone-nav-btn">My Account</button>
+                    </a>
+                </center>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+        $('document').ready(function () {
+            var max = 60;
+            var x = 1;
+            var y = 2;
+            var z = 1;
+            var vid = 2;
+
+            //Working on the add button
+            $("#body_text").click(function(){
+                if (x <= max) {
+
+                var html = `<div class="container-fluid home-nav-bg-white rounded-edges admin-mb b"> <div class="form-group style-form mb-3"><label>Body text:</label><div class="grid-container-edit"><textarea name="body_text[]" class="form-control" id="editor${y}" rows="5"></textarea><div class="edit-div"><img src="../icons/edit.svg" class="img-fluid edit-icon"></div></div></div></div>`;
+
+                    $('#formAdd').append(html);
+
+                    ClassicEditor
+                    .create( document.getElementById( `editor${y}` ), {
+                        // toolbar: [ 'heading', '|', 'bold', 'italic', 'link' ]
+                    } )
+                    .then( editor => {
+                        window.editor = editor;
+                    } )
+                    .catch( err => {
+                        console.error( err.stack );
+                    } );
+                    x++;
+                    y++;
+                }
+            });
+
+            //Working on the add button
+            $("#body_img").click(function(){
+                if (z <= max) {
+
+                var html = `<div class="container-fluid home-nav-bg-white rounded-edges file-upload-holder admin-mb b"><div class="form-group style-form mb-3"><label class="mb-3">Hero image</label><center><div class="drag-area p-0" id="dropContainer${vid}"><div class="icon"><img src="../icons/photo.svg" class="img-fluid"></div><header>Drag & Drop to Upload File or</header><button type="button">Upload image here</button><input type="file" name="file${vid}[]" id="fileInput${vid}" hidden></div></center></div></div>`;
+
+                    $('#formAdd').append(html);
+
+                    z++;
+                    vid++;
+                }
+            });
+
+            $("#formAdd").on('click', '#remove', function(){
+                $(this).closest('tr').remove();
+                x--;
+            });
+
+        
+
+
+        });
+    </script>
+
+    <!-- <script src="{{URL::asset('laravel-ckeditor/ckeditor.js')}}"></script>
+    <script type="text/javascript">
+      CKEDITOR.replace('ig');
+      CKEDITOR.replace('ig2');
+    </script> -->
+
+     <script src="../ckeditor5/ckeditor.js"></script>
+    <script>
+        var q = 2;
+
+        for (var i = 1; i <= q; i++) {
+             ClassicEditor
+            .create( document.getElementById( `default${i}` ), {
+                // toolbar: [ 'heading', '|', 'bold', 'italic', 'link' ]
+            } )
+            .then( editor => {
+                window.editor = editor;
+            } )
+            .catch( err => {
+                console.error( err.stack );
+            } );
+        }
+       
+    </script>
+
+    <script src="../js/drag.js"></script>
+    <script type="text/javascript" src="../js/ha.js"></script>
+    <script src="../bootstrap-5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+</html>

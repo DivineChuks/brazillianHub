@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Brillianzhub">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/logo/favicon.png">
+    <!--Font awsome-->
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
+
+    <!--Proxima Nova now Font-->
+    <link rel="stylesheet" href="../font/stylesheet.css">
+
+     <!-- Bootstrap CSS -->
+    <link href="../bootstrap-5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../stylesheet/style.css?v=0" type="text/css">
+    <link rel="stylesheet" href="../stylesheet/media.css?v=0" type="text/css">
+
+    <title>Brillianzhub</title>
+</head>
+<body onload="sliderStartup()">
+    <!-- Navigation bar -->
+    <header class="fixed-top a">
+        <nav class="container-fluid div-padding home-nav-bg-white desktop main-nav b">
+            <a href="../index.html">
+                <img src="../images/logo/dnav_logo.png" alt="Brillianzhub logo" class="img-fluid nav-logo b">
+            </a>
+
+            <div class="nav-links c">
+                <ul>
+                    <li>
+                        <a href="../about.html" class="active-page">About</a>
+                    </li>
+                    <li>
+                        <a href="../courses.html">Courses</a>
+                    </li>
+                    <li>
+                        <a href="../investments.html">Investments</a>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                          <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            Calculator
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li>
+                                <a class="dropdown-item" href="../compound-calculator.html">
+                                    <img src="../icons/nav-money.svg" class="img-fluid icon-course">&nbsp;
+                                    <span>Compound Savings Calculator</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="../stock-calculator.html">
+                                    <img src="../icons/nav-stock.svg" class="img-fluid icon-course">&nbsp;
+                                    <span>Stock Investment Calculator</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="../real-estate-calculator.html">
+                                    <img src="../icons/nav-investment.svg" class="img-fluid icon-course">&nbsp;
+                                    <span>Real Estate Investment Calculator</span>
+                                </a>
+                            </li>
+                          </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="../contact.html">Contact</a>
+                    </li>
+                    <li class="btn-link">
+                        <a href="admin-dashboard-login.html" class="account_btn">My Account
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="header phone">
+            <nav class="vnav home-nav-bg-white">
+                <a href="../index.html">
+                    <img src="../images/logo/logoMenu.png" alt="Brillianzhub logo" class="phone-header-logo">
+                </a>
+
+                <a href="" data-bs-toggle="modal" data-bs-target="#menuModal">
+                    <img src="../icons/menu.svg" class="nav__icon">
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main no-main">
+        <div class="container-fluid courses2-div-house home-nav-bg-green p-0 c">
+            <div class="grid-container-courses3-div">
+                <div class="partition courses-list-div-holder course-top-padding home-nav-bg-white desktop b">
+                    <div class="container-fluid courses-list-div p-0 a">
+                        <h2>Admin</h2>
+                        <div class="accordion accordion-flushe" id="accordionFlushExample">
+                            <ul class="accordion-ul">
+                                <li class="active-course">
+                                    <a href="admin-dashboard-courses-home.html">Courses</a>
+                                </li>
+
+                                <li>
+                                    <a href="admin-dashboard-investments-home.html">Investments</a>
+                                </li>
+
+                                <li>
+                                    <a href="admin-dashboard-blog-home.html">Blog</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="partition courses-container-div course-top-padding b">
+                    <div class="container-fluid courses-overview-div admin-content alt-div a">
+                        <!-- Contents -->
+                        <h4>Personal Finance Management</h4>
+
+                        
+                        <!-- This module dropdown contorls the 
+                        form below, as its value changes, the form submits to get the selected module details. more explaination in the form below.
+                         -->
+                        <div class="dropdown module-btn">
+                            <button class="btn p-0 searchFilter dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                                Module 1
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                <li>
+                                    <span onclick="insertModule('Module 1')" class="dropdown-item">Module 1</span>
+                                </li>
+
+                                <li>
+                                    <span onclick="insertModule('Module 2')" class="dropdown-item">Module 2</span>
+                                </li>
+                                
+                                <li>
+                                    <span onclick="insertModule('Module 3')" class="dropdown-item">Module 3</span>
+                                </li>
+                                
+                                <li>
+                                    <span onclick="insertModule('Module 4')" class="dropdown-item">Module 4</span>
+                                </li>
+                              <li><hr class="dropdown-divider"></li>
+                              <li>
+                                <a class="dropdown-item dropdown-add" data-bs-toggle="modal" data-bs-target="#addModuleModal">
+                                    <!-- <i class="fa fa-plus"></i> -->
+                                    <img src="../icons/add.svg" class="img-fluid">
+                                    Add Module
+                                </a>
+                              </li>
+                            </ul>
+                        </div>
+
+                        <!-- This form is submitted as the module is change, it goes to get the topics in the selected modules back to this page. you can go the Js file and stop the form submission so you can see the values displayed in the form. If you dont understand call me or go to https://softworkedu.com/dashboard user: chukechuke32@gmail.com pass: 123 -->
+                        <!-- Please delete the details once you have understood the concept. All the best -->
+                        <form action="admin-dashboard-modules.html?Module 2" method="post" id="moduleForm">
+                            <input type="hidden" name="default_search_module" value="Module 1" id="moduleInput">
+                        </form>
+
+                        <!-- Table -->
+                        <div class="admin-table home-nav-bg-white">
+                            <table>
+                              <tbody>
+
+                                <!-- Loop Body starts here, so the table contents repeats. -->
+                                <!-- NOTE: at the edit/delete icon you will see data-bs-target="#editModuleModal1", ensure to use the loop counter to replace the one there e.g data-bs-target="#editModuleModal{$counter}, do same for edit and delete icons" -->
+                                <tr>
+                                  <td>
+                                    <a href="admin-dashboard-module-topic.html">Financial Fundamentals</a><br>
+                                    10 Lessons
+                                  </td>
+                                  <td class="edit-td">
+                                      <img src="../icons/edit.svg" class="img-fluid" data-bs-toggle="modal" data-bs-target="#editModuleModal1">
+                                  </td>
+                                  <td class="edit-td">
+                                      <img src="../icons/delete.svg" class="img-fluid" data-bs-toggle="modal" data-bs-target="#deleteModuleModal1">
+                                  </td>
+                                </tr>
+
+                                <!-- NOTE: at the edit/delete modal below you will see id="#editModuleModal1", ensure to use the loop counter to replace the one there e.g id="editModuleModal{$counter}, do same for edit and delete modals" -->
+
+                                <!-- Edit Topic Modal -->
+                                <div class="modal fade" id="editModuleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog">
+                                    <div class="modal-content home-nav-bg-white">
+                                      <div class="modal-header home-nav-bg-white">
+                                        <h1 class="modal-title" id="exampleModalLabel">
+                                            Edit Topic
+                                        </h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body home-nav-bg-white">
+                                            <div class="container-fluid form-details2 p-0">
+                                                <form action="admin-dashboard-modules.html" method="post">
+                                                    <div class="style-form form-mb">
+                                                        <input type="hidden" name="topic_id" value="1">
+                                                        <label>Topic<sup>*</sup></label>
+                                                        <input type="text" class="form-control" name="topic" value="Financial Fundamentals" >
+                                                    </div>
+                                                    <p class="text-end mt-5 p-0 mx-0">
+                                                        <button type="submit" class="filled-btn-lg ">Submit</button>
+                                                    </p>
+                                                </form>
+                                            </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <!-- Delete Topic Modal -->
+                                <div class="modal fade" id="deleteModuleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog">
+                                    <div class="modal-content home-nav-bg-white">
+                                      <div class="modal-header home-nav-bg-white">
+                                        <h1 class="modal-title" id="exampleModalLabel">
+                                            Delete Topic
+                                        </h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body home-nav-bg-white">
+                                            <label class="text-red mb-5">Are You Sure You Want To Delete <b>Financial Fundamentals?</b></label>
+                                            <div class="container-fluid form-details2 p-0">
+                                                <form action="admin-dashboard-modules.html" method="post">
+                                                    <input type="hidden" name="topic_id" value="1">
+                                                    <p class="text-center mt-5">
+                                                        <button type="submit" class="filled-btn-lg ">YES</button>
+                                                    </p>
+                                                </form>
+                                            </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <!-- } loop body ends here -->
+
+
+                              </tbody>
+                            </table>
+                            <p class="text-end" data-bs-toggle="modal" data-bs-target="#addTopicModal">
+                                <i class="fa fa-plus"></i>
+                                Add Topic
+                            </p>
+                        </div>
+
+
+                        <!-- <div class="container-fluid home-nav-bg-white b"> -->
+                            
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        
+    </main>
+
+
+    <!-- Add Module Modal -->
+    <div class="modal fade" id="addModuleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content home-nav-bg-white">
+          <div class="modal-header">
+            <h1 class="modal-title" id="exampleModalLabel">
+                Add Module
+            </h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body home-nav-bg-white">
+                <label class="mb-5">Are You Sure You Want To Add A Module?</label>
+                <div class="container-fluid form-details2 p-0">
+                    <!-- The form will be submitted to the backend code which will add a module automatically and then return to this page. -->
+                    <form action="admin-dashboard-modules.html" method="post">
+                        <p class="text-center mt-5">
+                            <button type="submit" class="filled-btn-lg ">YES</button>
+                        </p>
+                    </form>
+                </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add Topic Modal -->
+    <div class="modal fade" id="addTopicModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content home-nav-bg-white">
+          <div class="modal-header home-nav-bg-white">
+            <h1 class="modal-title" id="exampleModalLabel">
+                Add Topic
+            </h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body home-nav-bg-white">
+                <div class="container-fluid form-details2 p-0">
+                    <form action="admin-dashboard-modules.html" method="post">
+                        <div class="style-form form-mb">
+                            <label>Topic<sup>*</sup></label>
+                            <input type="text" class="form-control" name="topic" placeholder="Enter Topic" >
+                        </div>
+                        <p class="text-end mt-5 p-0 mx-0">
+                            <button type="submit" class="filled-btn-lg ">Submit</button>
+                        </p>
+                    </form>
+                </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    
+    <!-- Menu Modal -->
+    <div class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen menuModal">
+        <div class="modal-content home-nav-bg-white">
+          <div class="modal-header vnav">
+            <h5 class="modal-title" id="exampleModalLabel">
+                <a href="../index.html"><img src="../images/logo/logoMenu.png" alt="Brillianzhub logo" class="phone-header-logo"></a>
+            </h5>
+
+            <img src="../icons/menu_cancel.svg" class="img-fluid nav__icon" data-bs-dismiss="modal" aria-label="Close">
+          </div>
+          <div class="modal-body p-0">
+                <ul>
+                    <li class="active-link">
+                        <a href="../about.html" class="active-page">
+                            About
+                            <img src="../icons/arrow_right.svg" class="alignright">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../courses.html">
+                            Courses
+                            <img src="../icons/arrow_right.svg" class="alignright">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../investments.html">
+                            Investments
+                            <img src="../icons/arrow_right.svg" class="alignright">
+                        </a>
+                    </li>
+                    <li>
+                        <a onclick="showCourses2()">
+                            Calculator
+                            <img src="../icons/arrow_right.svg" class="alignright" id="dropdown-arrow" name="1">
+                        </a>
+                        <div id="course-link-div">
+                            <a href="../compound-calculator.html">
+                                Compound Savings Calculator
+                                <img src="../icons/arrow_right.svg" class="alignright">
+                            </a>
+
+                            <a href="../stock-calculator.html">
+                                Stock Investment Calculator
+                                <img src="../icons/arrow_right.svg" class="alignright">
+                            </a>
+                            
+                            <a href="../real-estate-calculator.html">
+                                Real Estate Calculator
+                                <img src="../icons/arrow_right.svg" class="alignright">
+                            </a>
+                            
+                        </div>
+                    </li>
+                    <li>
+                        <a href="../contact.html">
+                            Contact
+                            <img src="../icons/arrow_right.svg" class="alignright">
+                        </a>
+                    </li>
+                </ul>
+
+                <center>
+                    <a href="admin-dashboard-login.html">
+                        <button class="filled-btn-lg phone-nav-btn">My Account</button>
+                    </a>
+                </center>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <script type="text/javascript" src="../js/ha.js"></script>
+    <script src="../bootstrap-5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+</html>

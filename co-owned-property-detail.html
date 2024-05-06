@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Brillianzhub">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="images/logo/favicon.png">
+    <!--Font awsome-->
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+    <!--Proxima Nova now Font-->
+    <link rel="stylesheet" href="font/stylesheet.css">
+
+     <!-- Bootstrap CSS -->
+    <link href="bootstrap-5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="stylesheet/style.css?v=0" type="text/css">
+    <link rel="stylesheet" href="stylesheet/media.css?v=0" type="text/css">
+
+    <title>Brillianzhub</title>
+</head>
+<body onload="sliderStartup()">
+    <!-- Navigation bar -->
+    <header class="fixed-top a">
+        <nav class="container-fluid div-padding home-nav-bg-white desktop main-nav b">
+            <a href="index.html">
+                <img src="images/logo/dnav_logo.png" alt="Brillianzhub logo" class="img-fluid nav-logo b">
+            </a>
+
+            <div class="nav-links c">
+                <ul>
+                    <li>
+                        <a href="about.html" class="active-page">About</a>
+                    </li>
+                    <li>
+                        <a href="courses.html">Courses</a>
+                    </li>
+                    <li>
+                        <a href="investments.html">Investments</a>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                          <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            Calculator
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li>
+                                <a class="dropdown-item" href="compound-calculator.html">
+                                    <img src="icons/nav-money.svg" class="img-fluid icon-course">&nbsp;
+                                    <span>Compound Savings Calculator</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="stock-calculator.html">
+                                    <img src="icons/nav-stock.svg" class="img-fluid icon-course">&nbsp;
+                                    <span>Stock Investment Calculator</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="real-estate-calculator.html">
+                                    <img src="icons/nav-investment.svg" class="img-fluid icon-course">&nbsp;
+                                    <span>Real Estate Investment Calculator</span>
+                                </a>
+                            </li>
+                          </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                    <li class="btn-link">
+                        <a href="signin.html" class="account_btn">My Account
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="header phone">
+            <nav class="vnav home-nav-bg-white">
+                <a href="index.html">
+                    <img src="images/logo/logoMenu.png" alt="Brillianzhub logo" class="phone-header-logo">
+                </a>
+
+                <a href="" data-bs-toggle="modal" data-bs-target="#menuModal">
+                    <img src="icons/menu.svg" class="nav__icon">
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main no-main">
+        <div class="container-fluid courses2-div-house home-nav-bg-green p-0 c">
+            <div class="grid-container-courses3-div">
+                <div class="partition courses-list-div-holder course-top-padding home-nav-bg-white desktop b">
+                    <div class="container-fluid courses-list-div p-0 a">
+                        <h2>Investments</h2>
+                        <div class="accordion accordion-flushe" id="accordionFlushExample">
+                            <!-- Repeat this accordion-item div if you have other category that have other courses in it, else use the list -->
+
+
+                            <ul class="accordion-ul">
+                            <li>
+                                <a href="dashboard-investments.html">Real Estate Investments</a>
+                            </li>
+                                
+                              <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                      <button class="accordion-button  collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                        My Portfolio
+                                      </button>
+                                    </h2>
+                                    <div id="flush-collapseOne" class="accordion-collapse mb-0 collapse" data-bs-parent="#accordionFlushExample">
+                                      <div class="accordion-body">
+                                        <a class="dropdown-item" href="dashboard-create-portfolio.html">
+                                            Create Portfolio
+                                        </a>
+
+                                        <a class="dropdown-item" href="dashboard-portfolio.html">
+                                            View Portfolio
+                                        </a>
+                                      </div>
+                                    </div>
+                                </div>
+
+                                <li>
+                                    <a href="dashboard-referrals.html">Referrals</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="partition courses-container-div course-top-padding b">
+                    <div class="container-fluid courses-overview-div alt-div a">
+                        <!-- Investment List -->
+                        <div class="container-fluid investment-category p-0 b">
+
+                            <!-- Properties list -->
+                            <div class="investment-property-list a"> 
+                                <div class="property-list-div hlist">
+                                    <h3 class="first-h3 alignleft">
+                                        School Hostel Accommodation
+                                    </h3>
+                                    <h3 class="alignright">
+                                        <a class="filled-btn" data-bs-toggle="modal" data-bs-target="#unitsModal">
+                                            Buy Units
+                                        </a>
+                                    </h3>
+                                    <div class="clr"></div>
+                                </div>
+ 
+                                <!-- Properties Details -->
+                                <div class="container-fluid property-detail2 p-0 a">
+                                    <!-- Slider -->
+                                    <div class="propery-img-slider c" id="slider-image">
+                                        <h5 class="alignleft">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none" onclick="prevImage()" id="prev-image-btn">
+                                              <circle cx="18" cy="18" r="18" fill="#EEF2F3"/>
+                                              <mask id="mask0_532_4322" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="6" y="6" width="24" height="24">
+                                                <rect x="6" y="6" width="24" height="24" fill="#D9D9D9"/>
+                                              </mask>
+                                              <g mask="url(#mask0_532_4322)">
+                                                <path d="M16.8 18L20.7 21.9C20.8833 22.0834 20.975 22.3167 20.975 22.6C20.975 22.8834 20.8833 23.1167 20.7 23.3C20.5167 23.4834 20.2833 23.575 20 23.575C19.7167 23.575 19.4833 23.4834 19.3 23.3L14.7 18.7C14.6 18.6 14.5292 18.4917 14.4875 18.375C14.4458 18.2584 14.425 18.1334 14.425 18C14.425 17.8667 14.4458 17.7417 14.4875 17.625C14.5292 17.5084 14.6 17.4 14.7 17.3L19.3 12.7C19.4833 12.5167 19.7167 12.425 20 12.425C20.2833 12.425 20.5167 12.5167 20.7 12.7C20.8833 12.8834 20.975 13.1167 20.975 13.4C20.975 13.6834 20.8833 13.9167 20.7 14.1L16.8 18Z" fill="#051722"/>
+                                              </g>
+                                            </svg>
+                                        </h5>
+
+                                        <h5 class="alignright">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none" onclick="nextImage()" id="next-image-btn">
+                                              <circle cx="18" cy="18" r="18" transform="rotate(-180 18 18)" fill="#EEF2F3"/>
+                                              <mask id="mask0_532_4323" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="6" y="6" width="24" height="24">
+                                                <rect x="30" y="30" width="24" height="24" transform="rotate(-180 30 30)" fill="#D9D9D9"/>
+                                              </mask>
+                                              <g mask="url(#mask0_532_4323)">
+                                                <path d="M19.2 18L15.3 14.1C15.1167 13.9166 15.025 13.6833 15.025 13.4C15.025 13.1166 15.1167 12.8833 15.3 12.7C15.4833 12.5166 15.7167 12.425 16 12.425C16.2833 12.425 16.5167 12.5166 16.7 12.7L21.3 17.3C21.4 17.4 21.4708 17.5083 21.5125 17.625C21.5542 17.7416 21.575 17.8666 21.575 18C21.575 18.1333 21.5542 18.2583 21.5125 18.375C21.4708 18.4916 21.4 18.6 21.3 18.7L16.7 23.3C16.5167 23.4833 16.2833 23.575 16 23.575C15.7167 23.575 15.4833 23.4833 15.3 23.3C15.1167 23.1166 15.025 22.8833 15.025 22.6C15.025 22.3166 15.1167 22.0833 15.3 21.9L19.2 18Z" fill="#051722"/>
+                                              </g>
+                                            </svg>
+                                        </h5>
+                                        <div class="clr"></div>
+                                    </div>
+
+                                    <h6>
+                                        <span class="s1">₦12,000/unit</span>
+                                        <span class="s2">Newly completed</span>
+                                    </h6>
+
+                                    <div class="property-desc p-0">
+                                        <h4>Description</h4>
+                                        <p>
+                                            Live in luxury in this newly completed building, offering the latest amenities and features in a prime location. With spacious floor plans, stunning views, and state-of-the-art finishes, this building is the perfect place to call home.
+                                        </p>
+
+                                        <p>
+                                            Enjoy the convenience of having everything you need at your fingertips, with on-site amenities such as a fitness center, swimming pool, and rooftop terrace. Plus, you'll be just steps away from shopping, dining, and entertainment.
+                                        </p>
+                                    </div>
+
+                                    <div class="property-desc features-div p-0">
+                                        <h4>Features</h4>
+                                        <ul>
+                                            <li>
+                                                A smart one bedroom + sitting room with automated home features
+                                            </li>
+                                            <li>
+                                                Bedroom area , a modern wardrobe , dining area , kitchen
+                                            </li>
+                                            <li>
+                                                High quality beddings & furniture
+                                            </li>
+                                            <li>
+                                                Fully finished kitchen area with a cooker, microwave, heat extractor, washing machine and smoke detectors
+                                            </li>
+                                            <li>
+                                                Fingerprint or card door access, doorbell & cameras
+                                            </li>
+                                            <li>
+                                                A car parking space
+                                            </li>
+                                            <li>
+                                                24hours electricity and treated water supply
+                                            </li>
+                                            <li>
+                                                Central swimming pool area, a lounge, a gym and a playground
+                                            </li>
+                                            <li>
+                                                Located at Hockley millenial town, eko akete
+                                            </li>
+                                            <li>
+                                                A perfect place for annual or holiday rentals In development by Landwey
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    </main>
+
+
+    <footer class="container-fluid footer-div mb-0 bg-sec">
+        <div class="container-fluid first-div c">
+            <div class="row div-padding">
+                <div class="col-lg-5 col-md-4 col-sm-12 p-0 mb-4 a">
+                    <div class="footer-logo">
+                        <a href="index.html">
+                            <img src="images/logo/y.png" class="img-fluid logo-footer" alt="Brillianzhub logo" >
+                        </a>
+
+                        <p>
+                            Brillianzhub is a leading financial services <br class="desktop">firm specializing in real estate, stocks, and <br class="desktop">personalized financial coaching.
+                        </p>
+
+                        <div class="socials-media desktop">
+                            <a href="">
+                                <img src="icons/facebook.svg" class="img-fluid" alt="Brillianzhub on facebook">
+                            </a>
+
+                            <a href="">
+                                <img src="icons/instagram.svg" class="img-fluid" alt="Brillianzhub on instagram">
+                            </a>
+
+                            <a href="">
+                                <img src="icons/x.svg" class="img-fluid" alt="Brillianzhub on x">
+                            </a>
+
+                            <a href="">
+                                <img src="icons/linkedin.svg" class="img-fluid" alt="Brillianzhub on linkedin">
+                            </a>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-12 mb-4 p-0 b">
+                    <div class="footer-links fg">
+                        <h6>Company</h6>
+                        <ul>
+                            <li>
+                                <a href="about.html">About</a>
+                            </li>
+
+                            <li>
+                                <a href="services.html">Services</a>
+                            </li>
+                            
+                            <li>
+                                <a href="resources.html">Resources</a>
+                            </li>
+                            
+                            <li>
+                                <a href="investments.html">Investment Packages</a>
+                            </li>
+                            
+                            <li>
+                                <a href="calculator.html">Financial Calculator</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-12 mb-4 p-0 c">
+                    <div class="footer-links">
+                        <h6>Contact</h6>
+                        <p>
+                            <img src="icons/venue.svg" class="img-fluid">&nbsp;
+                            Borsigstr. 5, Feuerbach, Stuttgart, Germany.
+                        </p>
+
+                        <p class="p-0">
+                            <a href="mailto:brillianzhub@gmail.com">
+                                <img src="icons/at.svg" class="img-fluid">&nbsp;
+                                brillianzhub@gmail.com
+                            </a>
+                            
+                        </p>
+
+                        <p class="p-0 phone-number-link">
+                            <a href="tel:+49 1590 4976605">
+                                <img src="icons/phone.svg" class="img-fluid">&nbsp;
+                                +49 1590 4976605
+                            </a>
+                        </p>
+
+
+                        <div class="socials-media phone">
+                            <a href="">
+                                <img src="icons/facebook.svg" class="img-fluid" alt="Brillianzhub on facebook">
+                            </a>
+
+                            <a href="">
+                                <img src="icons/instagram.svg" class="img-fluid" alt="Brillianzhub on instagram">
+                            </a>
+
+                            <a href="">
+                                <img src="icons/x.svg" class="img-fluid" alt="Brillianzhub on x">
+                            </a>
+
+                            <a href="">
+                                <img src="icons/linkedin.svg" class="img-fluid" alt="Brillianzhub on linkedin">
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Copywrite Div -->
+        <div class="container-fluid copywrite-div p-0 b">
+            <div class="container-fluid">
+                <div class="row div-padding ">
+                    <div class="col-lg-5 col-md-5 col-sm-12 p-0 copy-div c">
+                        <p>Copyright &copy Brillianzhub 2023.&nbsp;  All Rights Reserved</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Units Modal -->
+    <div class="modal fade" id="unitsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title" id="exampleModalLabel">School Hostel Accommodation</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body home-nav-bg-white">
+                <div class="container-fluid form-details2 p-0  c">
+                    <form action="payment.html" method="post">
+                        <div class="style-form form-mb">
+                            <label>Full name<sup>*</sup></label>
+                            <input type="text" class="form-control" name="full_name" placeholder="Your full name" aria-label="Full name">
+                        </div>
+
+                        <div class="style-form form-mb">
+                          <label class="form-label">Email address<sup>*</sup></label>
+                          <input type="email" class="form-control" name="email_address" placeholder="Fill in your best email">
+                        </div>
+
+                        <div class="style-form form-mb">
+                            <label>Price per unit</label>
+                            <input type="text" class="form-control" name="unit_price" value="₦12,000" aria-label="Price per unit">
+                        </div>
+
+                        <div class="style-form units-form form-mb">
+                            <label>Units</label>
+                            <input type="number" class="form-control" name="units" min="1">
+                        </div>
+
+                        <p class="text-end mb-0">
+                            <button type="submit" class="filled-btn-lg ">
+                                Proceed to Pay
+                            </button>
+                        </p>
+                    </form>
+                </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Menu Modal -->
+    <div class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen menuModal">
+        <div class="modal-content home-nav-bg-white">
+          <div class="modal-header vnav">
+            <h5 class="modal-title" id="exampleModalLabel">
+                <a href="index.html"><img src="images/logo/logoMenu.png" alt="Brillianzhub logo" class="phone-header-logo"></a>
+            </h5>
+
+            <img src="icons/menu_cancel.svg" class="img-fluid nav__icon" data-bs-dismiss="modal" aria-label="Close">
+          </div>
+          <div class="modal-body p-0">
+                <ul>
+                    <li class="active-link">
+                        <a href="about.html" class="active-page">
+                            About
+                            <img src="icons/arrow_right.svg" class="alignright">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="courses.html">
+                            Courses
+                            <img src="icons/arrow_right.svg" class="alignright">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="investments.html">
+                            Investments
+                            <img src="icons/arrow_right.svg" class="alignright">
+                        </a>
+                    </li>
+                    <li>
+                        <a onclick="showCourses()">
+                            Calculator
+                            <img src="icons/arrow_right.svg" class="alignright" id="dropdown-arrow" name="1">
+                        </a>
+                        <div id="course-link-div">
+                            <a href="compound-calculator.html">
+                                Compound Savings Calculator
+                                <img src="icons/arrow_right.svg" class="alignright">
+                            </a>
+
+                            <a href="stock-calculator.html">
+                                Stock Investment Calculator
+                                <img src="icons/arrow_right.svg" class="alignright">
+                            </a>
+                            
+                            <a href="real-estate-calculator.html">
+                                Real Estate Calculator
+                                <img src="icons/arrow_right.svg" class="alignright">
+                            </a>
+                            
+                        </div>
+                    </li>
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                            <img src="icons/arrow_right.svg" class="alignright">
+                        </a>
+                    </li>
+                </ul>
+
+                <center>
+                    <a href="signin.html">
+                        <button class="filled-btn-lg phone-nav-btn">My Account</button>
+                    </a>
+                </center>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <script type="text/javascript">
+        // Just create a variable with the link of your images from the database, seperated by a ?. then equate the image_link to it.
+        var image_link = "images/properties/3.jpg?images/properties/2.jpg?images/properties/1.jpg";
+
+        const property_img = image_link.split(/[?]/);
+        var length = property_img.length;
+        var limit = length - 1;
+        var x = 0;
+
+        // The rest of the script is in the Js file.
+    </script>
+    <script type="text/javascript" src="js/ha.js"></script>
+    <script src="bootstrap-5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+</html>

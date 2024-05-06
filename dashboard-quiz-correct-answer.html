@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="Brillianzhub">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="images/logo/favicon.png">
+    <!--Font awsome-->
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+    <!--Proxima Nova now Font-->
+    <link rel="stylesheet" href="font/stylesheet.css">
+
+     <!-- Bootstrap CSS -->
+    <link href="bootstrap-5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  	<link rel="stylesheet" href="stylesheet/style.css?v=0" type="text/css">
+  	<link rel="stylesheet" href="stylesheet/media.css?v=0" type="text/css">
+
+	<title>Brillianzhub</title>
+</head>
+<body>
+	<!-- Navigation bar -->
+	<header class="fixed-top a">
+		<nav class="container-fluid div-padding home-nav-bg-white desktop main-nav b">
+			<a href="index.html">
+				<img src="images/logo/dnav_logo.png" alt="Brillianzhub logo" class="img-fluid nav-logo b">
+			</a>
+
+			<div class="nav-links c">
+				<ul>
+					<li>
+						<a href="about.html" class="active-page">About</a>
+					</li>
+					<li>
+						<a href="courses.html">Courses</a>
+					</li>
+					<li>
+						<a href="investments.html">Investments</a>
+					</li>
+                    <li>
+                        <div class="dropdown">
+                          <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            Calculator
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li>
+                                <a class="dropdown-item" href="compound-calculator.html">
+                                    <img src="icons/nav-money.svg" class="img-fluid icon-course">&nbsp;
+                                    <span>Compound Savings Calculator</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="stock-calculator.html">
+                                    <img src="icons/nav-stock.svg" class="img-fluid icon-course">&nbsp;
+                                    <span>Stock Investment Calculator</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="real-estate-calculator.html">
+                                    <img src="icons/nav-investment.svg" class="img-fluid icon-course">&nbsp;
+                                    <span>Real Estate Investment Calculator</span>
+                                </a>
+                            </li>
+                          </ul>
+                        </div>
+                    </li>
+					<li>
+						<a href="contact.html">Contact</a>
+					</li>
+					<li class="btn-link">
+						<a href="signin.html" class="account_btn">My Account
+						</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+	    <div class="header phone">
+	        <nav class="vnav home-nav-bg-white">
+	            <a href="index.html">
+	                <img src="images/logo/logoMenu.png" alt="Brillianzhub logo" class="phone-header-logo">
+	            </a>
+
+	            <a href="" data-bs-toggle="modal" data-bs-target="#menuModal">
+	                <img src="icons/menu.svg" class="nav__icon">
+	            </a>
+	        </nav>
+	    </div>
+	</header>
+
+	<main class="main no-main">
+        <div class="container-fluid courses2-div-house home-nav-bg-green p-0 c">
+            <div class="grid-container-courses2-div">
+                <div class="partition courses-list-div-holder course-top-padding home-nav-bg-white desktop b">
+                    <div class="container-fluid courses-list-div p-0 a">
+                        <h2>Courses</h2>
+                        <div class="accordion accordion-flushe" id="accordionFlushExample">
+                            <!-- Repeat this accordion-item div if you have other category that have other courses in it, else use the list -->
+                          <div class="accordion-item">
+                            <h2 class="accordion-header">
+                              <button class="accordion-button  collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                Personal Financial Management
+                              </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse mb-0 collapse" data-bs-parent="#accordionFlushExample">
+                              <div class="accordion-body">
+                                <a class="dropdown-item" href="#">
+                                    Course 1
+                                </a>
+
+                                <a class="dropdown-item" href="#">
+                                    Course 2
+                                </a>
+
+                                <a class="dropdown-item" href="#">
+                                    Course 3
+                                </a>
+
+                                <a class="dropdown-item" href="#">
+                                    Course 4
+                                </a>
+
+                                <a class="dropdown-item" href="#">
+                                    Course 5
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+
+                            <ul class="accordion-ul">
+                                <li>
+                                    <a href="modules.html">Stock Investment</a>
+                                </li>
+
+                                <li>
+                                    <a href="modules.html">Real Estate Investment</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="partition courses-container-div  c-overview-div course-top-padding b">
+                    <div class="container-fluid courses-overview-div p-0 a">
+                        <!-- Continue where you left off -->
+                        <div class="container-fluid last-lesson-div l-lesson-div2 home-nav-bg-white c">
+                            <div class="next-lesson-div p-0">
+                                <div class="progress-holder-div">
+                                    <h6 class="mb-0">
+                                        Quiz
+                                    </h6>
+                                    <p class="module-p mb-4">
+                                        Module 1
+                                    </p>
+                                    <div class="grid-container-progress2 p-0 b mb-0">
+                                        <div class="progress " role="progressbar" aria-label="Success example" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+                                          <div class="progress-bar bg-dark-blue" style="width: 10%"></div>
+                                        </div>
+                                        <span class=""> 1/10 questions</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="quiz-div b">
+                                    <p>Question 1</p>
+                                    <h4>
+                                        Which of the following is NOT a good reason to create a budget?
+                                    </h4>
+
+                                    <div class="form-check m-0 p-0">
+                                        <label class="quiz-radio">
+                                            <input type="radio"disabled> To track your income and expenses
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check m-0 p-0">
+                                        <label class="quiz-radio">
+                                            <input type="radio"disabled> To make sure you are spending less than you earn
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check m-0 p-0">
+                                        <label class="quiz-radio">
+                                            <input type="radio" disabled> To identify areas where you can save money
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check m-0 p-0">
+                                        <label class="quiz-radio">
+                                            <input type="radio" checked> To set financial goals
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Answer Div -->
+                                <div class="quiz-response-div home-nav-bg-green p">
+                                    <h4>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="51" height="51" viewBox="0 0 51 51" fill="none">
+                                          <circle cx="25.5" cy="25.5" r="25.5" fill="#0DCA36"/>
+                                          <mask id="mask0_828_9338" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="10" y="10" width="32" height="32">
+                                            <rect x="10" y="10" width="32" height="32" fill="#D9D9D9"/>
+                                          </mask>
+                                          <g mask="url(#mask0_828_9338)">
+                                            <path d="M22.7338 30.2L34.0338 18.9C34.3004 18.6333 34.6171 18.5 34.9838 18.5C35.3504 18.5 35.6671 18.6333 35.9338 18.9C36.2004 19.1667 36.3338 19.4833 36.3338 19.85C36.3338 20.2167 36.2004 20.5333 35.9338 20.8L23.6671 33.0667C23.4004 33.3333 23.0893 33.4667 22.7338 33.4667C22.3782 33.4667 22.0671 33.3333 21.8004 33.0667L16.0671 27.3333C15.8004 27.0667 15.6727 26.75 15.6838 26.3833C15.6949 26.0167 15.8338 25.7 16.1004 25.4333C16.3671 25.1667 16.6838 25.0333 17.0504 25.0333C17.4171 25.0333 17.7338 25.1667 18.0004 25.4333L22.7338 30.2Z" fill="white"/>
+                                          </g>
+                                        </svg>
+                                        Correct!
+                                    </h4>
+                                    <p>
+                                        <span>To set financial goals</span> is not a good reason to create a budget because a budget is a tool for tracking income and expenses, identifying areas where you can save money, and making sure you are spending less than you earn. While setting financial goals is an important part of personal finance management, it is not the primary purpose of a budget. 
+                                    </p>
+                                </div>
+                                    
+                                <p class="text-end mb-0">
+                                    <a href="dashboard-quiz-wrong-answer.html">
+                                        <button type="submit" class="filled-btn-lg ">
+                                        Continue
+                                    </button>
+                                    </a>
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+	</main>
+
+
+    <footer class="container-fluid footer-div mb-0 bg-sec">
+        <div class="container-fluid first-div c">
+            <div class="row div-padding">
+                <div class="col-lg-5 col-md-4 col-sm-12 p-0 mb-4 a">
+                    <div class="footer-logo">
+                        <a href="index.html">
+                            <img src="images/logo/y.png" class="img-fluid logo-footer" alt="Brillianzhub logo" >
+                        </a>
+
+                        <p>
+                            Brillianzhub is a leading financial services <br class="desktop">firm specializing in real estate, stocks, and <br class="desktop">personalized financial coaching.
+                        </p>
+
+                        <div class="socials-media desktop">
+                            <a href="">
+                                <img src="icons/facebook.svg" class="img-fluid" alt="Brillianzhub on facebook">
+                            </a>
+
+                            <a href="">
+                                <img src="icons/instagram.svg" class="img-fluid" alt="Brillianzhub on instagram">
+                            </a>
+
+                            <a href="">
+                                <img src="icons/x.svg" class="img-fluid" alt="Brillianzhub on x">
+                            </a>
+
+                            <a href="">
+                                <img src="icons/linkedin.svg" class="img-fluid" alt="Brillianzhub on linkedin">
+                            </a>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-12 mb-4 p-0 b">
+                    <div class="footer-links fg">
+                        <h6>Company</h6>
+                        <ul>
+                            <li>
+                                <a href="about.html">About</a>
+                            </li>
+
+                            <li>
+                                <a href="services.html">Services</a>
+                            </li>
+                            
+                            <li>
+                                <a href="resources.html">Resources</a>
+                            </li>
+                            
+                            <li>
+                                <a href="investments.html">Investment Packages</a>
+                            </li>
+                            
+                            <li>
+                                <a href="calculator.html">Financial Calculator</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-12 mb-4 p-0 c">
+                    <div class="footer-links">
+                        <h6>Contact</h6>
+                        <p>
+                            <img src="icons/venue.svg" class="img-fluid">&nbsp;
+                            Borsigstr. 5, Feuerbach, Stuttgart, Germany.
+                        </p>
+
+                        <p class="p-0">
+                            <a href="mailto:brillianzhub@gmail.com">
+                                <img src="icons/at.svg" class="img-fluid">&nbsp;
+                                brillianzhub@gmail.com
+                            </a>
+                            
+                        </p>
+
+                        <p class="p-0 phone-number-link">
+                            <a href="tel:+49 1590 4976605">
+                                <img src="icons/phone.svg" class="img-fluid">&nbsp;
+                                +49 1590 4976605
+                            </a>
+                        </p>
+
+
+                        <div class="socials-media phone">
+                            <a href="">
+                                <img src="icons/facebook.svg" class="img-fluid" alt="Brillianzhub on facebook">
+                            </a>
+
+                            <a href="">
+                                <img src="icons/instagram.svg" class="img-fluid" alt="Brillianzhub on instagram">
+                            </a>
+
+                            <a href="">
+                                <img src="icons/x.svg" class="img-fluid" alt="Brillianzhub on x">
+                            </a>
+
+                            <a href="">
+                                <img src="icons/linkedin.svg" class="img-fluid" alt="Brillianzhub on linkedin">
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Copywrite Div -->
+        <div class="container-fluid copywrite-div p-0 b">
+            <div class="container-fluid">
+                <div class="row div-padding ">
+                    <div class="col-lg-5 col-md-5 col-sm-12 p-0 copy-div c">
+                        <p>Copyright &copy Brillianzhub 2023.&nbsp;  All Rights Reserved</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Menu Modal -->
+    <div class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen menuModal">
+        <div class="modal-content home-nav-bg-white">
+          <div class="modal-header vnav">
+            <h5 class="modal-title" id="exampleModalLabel">
+                <a href="index.html"><img src="images/logo/logoMenu.png" alt="Brillianzhub logo" class="phone-header-logo"></a>
+            </h5>
+
+            <img src="icons/menu_cancel.svg" class="img-fluid nav__icon" data-bs-dismiss="modal" aria-label="Close">
+          </div>
+          <div class="modal-body p-0">
+                <ul>
+                    <li class="active-link">
+                        <a href="about.html" class="active-page">
+                            About
+                            <img src="icons/arrow_right.svg" class="alignright">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="courses.html">
+                            Courses
+                            <img src="icons/arrow_right.svg" class="alignright">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="investments.html">
+                            Investments
+                            <img src="icons/arrow_right.svg" class="alignright">
+                        </a>
+                    </li>
+                    <li>
+                        <a onclick="showCourses()">
+                            Calculator
+                            <img src="icons/arrow_right.svg" class="alignright" id="dropdown-arrow" name="1">
+                        </a>
+                        <div id="course-link-div">
+                            <a href="compound-calculator.html">
+                                Compound Savings Calculator
+                                <img src="icons/arrow_right.svg" class="alignright">
+                            </a>
+
+                            <a href="stock-calculator.html">
+                                Stock Investment Calculator
+                                <img src="icons/arrow_right.svg" class="alignright">
+                            </a>
+                            
+                            <a href="real-estate-calculator.html">
+                                Real Estate Calculator
+                                <img src="icons/arrow_right.svg" class="alignright">
+                            </a>
+                            
+                        </div>
+                    </li>
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                            <img src="icons/arrow_right.svg" class="alignright">
+                        </a>
+                    </li>
+                </ul>
+
+                <center>
+                    <a href="signin.html">
+                        <button class="filled-btn-lg phone-nav-btn">My Account</button>
+                    </a>
+                </center>
+          </div>
+        </div>
+      </div>
+    </div>
+
+	<script type="text/javascript" src="js/ha.js"></script>
+	<script src="bootstrap-5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+</html>

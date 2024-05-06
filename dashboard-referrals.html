@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Brillianzhub">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="images/logo/favicon.png">
+    <!--Font awsome-->
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+    <!--Proxima Nova now Font-->
+    <link rel="stylesheet" href="font/stylesheet.css">
+
+     <!-- Bootstrap CSS -->
+    <link href="bootstrap-5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="stylesheet/style.css?v=0" type="text/css">
+    <link rel="stylesheet" href="stylesheet/media.css?v=0" type="text/css">
+
+    <title>Brillianzhub</title>
+</head>
+<body onload="sliderStartup()">
+    <!-- Navigation bar -->
+    <header class="fixed-top a">
+        <nav class="container-fluid div-padding home-nav-bg-white desktop main-nav b">
+            <a href="index.html">
+                <img src="images/logo/dnav_logo.png" alt="Brillianzhub logo" class="img-fluid nav-logo b">
+            </a>
+
+            <div class="nav-links c">
+                <ul>
+                    <li>
+                        <a href="about.html" class="active-page">About</a>
+                    </li>
+                    <li>
+                        <a href="courses.html">Courses</a>
+                    </li>
+                    <li>
+                        <a href="investments.html">Investments</a>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                          <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            Calculator
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li>
+                                <a class="dropdown-item" href="compound-calculator.html">
+                                    <img src="icons/nav-money.svg" class="img-fluid icon-course">&nbsp;
+                                    <span>Compound Savings Calculator</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="stock-calculator.html">
+                                    <img src="icons/nav-stock.svg" class="img-fluid icon-course">&nbsp;
+                                    <span>Stock Investment Calculator</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="real-estate-calculator.html">
+                                    <img src="icons/nav-investment.svg" class="img-fluid icon-course">&nbsp;
+                                    <span>Real Estate Investment Calculator</span>
+                                </a>
+                            </li>
+                          </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                    <li class="btn-link">
+                        <a href="signin.html" class="account_btn">My Account
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="header phone">
+            <nav class="vnav home-nav-bg-white">
+                <a href="index.html">
+                    <img src="images/logo/logoMenu.png" alt="Brillianzhub logo" class="phone-header-logo">
+                </a>
+
+                <a href="" data-bs-toggle="modal" data-bs-target="#menuModal">
+                    <img src="icons/menu.svg" class="nav__icon">
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main no-main">
+        <div class="container-fluid courses2-div-house home-nav-bg-green p-0 c">
+            <div class="grid-container-courses3-div">
+                <div class="partition courses-list-div-holder course-top-padding home-nav-bg-white desktop b">
+                    <div class="container-fluid courses-list-div p-0 a">
+                        <h2>Investments</h2>
+                        <div class="accordion accordion-flushe" id="accordionFlushExample">
+                            <!-- Repeat this accordion-item div if you have other category that have other courses in it, else use the list -->
+
+
+                            <ul class="accordion-ul">
+                            <li>
+                                <a href="dashboard-investments.html">Real Estate Investments</a>
+                            </li>
+                                
+                              <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                      <button class="accordion-button  collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                        My Portfolio
+                                      </button>
+                                    </h2>
+                                    <div id="flush-collapseOne" class="accordion-collapse mb-0 collapse" data-bs-parent="#accordionFlushExample">
+                                      <div class="accordion-body">
+                                        <a class="dropdown-item" href="dashboard-create-portfolio.html">
+                                            Create Portfolio
+                                        </a>
+
+                                        <a class="dropdown-item" href="dashboard-portfolio.html">
+                                            View Portfolio
+                                        </a>
+                                      </div>
+                                    </div>
+                                </div>
+
+                                <li>
+                                    <a href="dashboard-referrals.html">Referrals</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="partition courses-container-div course-top-padding b">
+                    <div class="container-fluid courses-overview-div referral-div alt-div a">
+                        <h4 class="ref-mb">Referral Link</h4>
+
+                        <!-- Referral Link -->
+                        <div class="container-fluid referral-link-div home-nav-bg-white b">
+                            <h5>Your referral link</h5>
+                            <div class="p-0">
+                                <h6 class="alignleft" id="referral-link">
+                                    https://www.reddit.com/r/starcitizen/comments/x96r4p/yournameappearshere/
+                                </h6>
+                                <h6 class="alignright" onclick="copyReferralLink()" title="Copy to clipboard">
+                                    <!-- <img src="icons/content_copy.svg"> -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="20" viewBox="0 0 17 20" fill="none">
+                                      <path d="M6 16C5.45 16 4.97917 15.8042 4.5875 15.4125C4.19583 15.0208 4 14.55 4 14V2C4 1.45 4.19583 0.979167 4.5875 0.5875C4.97917 0.195833 5.45 0 6 0H15C15.55 0 16.0208 0.195833 16.4125 0.5875C16.8042 0.979167 17 1.45 17 2V14C17 14.55 16.8042 15.0208 16.4125 15.4125C16.0208 15.8042 15.55 16 15 16H6ZM6 14H15V2H6V14ZM2 20C1.45 20 0.979167 19.8042 0.5875 19.4125C0.195833 19.0208 0 18.55 0 18V5C0 4.71667 0.0958333 4.47917 0.2875 4.2875C0.479167 4.09583 0.716667 4 1 4C1.28333 4 1.52083 4.09583 1.7125 4.2875C1.90417 4.47917 2 4.71667 2 5V18H12C12.2833 18 12.5208 18.0958 12.7125 18.2875C12.9042 18.4792 13 18.7167 13 19C13 19.2833 12.9042 19.5208 12.7125 19.7125C12.5208 19.9042 12.2833 20 12 20H2Z" fill="#696A73"/>
+                                    </svg>
+                                    <span class="clip-icon" id="clip-icon">Copied &nbsp;</span>
+                                </h6>
+                                <div class="clr"></div> 
+                            </div>
+                        </div>
+
+                        <!-- Referral List -->
+                        <h4>Your Earnings</h4>
+                        <p class="ref-mb">
+                            You can withdraw a minimum of ₦5,000. Click the withdraw button to make your withdrawals.
+                        </p>
+
+                        <!-- Table -->
+                        <div class="referral-table">
+                            <table class="">
+                              <thead>
+                                <tr class="th-heading">
+                                  <th scope="colt">Property</th>
+                                  <th scope="colt">Commission</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>Property Name</td>
+                                  <td>₦10,000</td>
+                                </tr>
+                                <tr>
+                                  <td>Property Name</td>
+                                  <td>₦10,000</td>
+                                </tr>
+                                <tr>
+                                  <td>Property Name</td>
+                                  <td>₦10,000</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        </div>
+
+                        <p class="text-end mb-0">
+                            <button class="filled-btn-lg" data-bs-toggle="modal" data-bs-target="#unitsModal">
+                                Withdraw Earnings
+                            </button>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        
+    </main>
+
+
+    <!-- Units Modal -->
+    <div class="modal fade" id="unitsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title" id="exampleModalLabel"> Account Details</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body home-nav-bg-white">
+                <div class="container-fluid form-details2 p-0  c">
+                    <form action="payment.html" method="post">
+                        <div class="style-form form-mb">
+                            <label>Account number<sup>*</sup></label>
+                            <input type="text" class="form-control" name="account_number" placeholder="Your account number" aria-label="Full name">
+                        </div>
+
+                        <div class="style-form form-mb">
+                          <label class="form-label">Bank name<sup>*</sup></label>
+                            <select class="form-select" id="investment_type">
+                              <option>Select bank here</option>
+                              <option>Access bank</option>
+                              <option>Fidelity bank</option>
+                              <option>First bank</option>
+                              <option>GT bank</option>
+                              <option>Kuda bank</option>
+                              <option>Union bank</option>
+                            </select>
+                        </div>
+
+                        <div class="style-form form-mb mb-5">
+                            <label>Amount</label>
+                            <input type="text" class="form-control" name="amount" value="₦12,000" aria-label="Price per unit">
+                        </div>
+
+                        <p class="text-end mb-0 mx-0">
+                            <button type="submit" class="filled-btn-lg ">
+                                Withdraw
+                            </button>
+                        </p>
+                    </form>
+                </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <footer class="container-fluid footer-div mb-0 bg-sec">
+        <div class="container-fluid first-div c">
+            <div class="row div-padding">
+                <div class="col-lg-5 col-md-4 col-sm-12 p-0 mb-4 a">
+                    <div class="footer-logo">
+                        <a href="index.html">
+                            <img src="images/logo/y.png" class="img-fluid logo-footer" alt="Brillianzhub logo" >
+                        </a>
+
+                        <p>
+                            Brillianzhub is a leading financial services <br class="desktop">firm specializing in real estate, stocks, and <br class="desktop">personalized financial coaching.
+                        </p>
+
+                        <div class="socials-media desktop">
+                            <a href="">
+                                <img src="icons/facebook.svg" class="img-fluid" alt="Brillianzhub on facebook">
+                            </a>
+
+                            <a href="">
+                                <img src="icons/instagram.svg" class="img-fluid" alt="Brillianzhub on instagram">
+                            </a>
+
+                            <a href="">
+                                <img src="icons/x.svg" class="img-fluid" alt="Brillianzhub on x">
+                            </a>
+
+                            <a href="">
+                                <img src="icons/linkedin.svg" class="img-fluid" alt="Brillianzhub on linkedin">
+                            </a>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-12 mb-4 p-0 b">
+                    <div class="footer-links fg">
+                        <h6>Company</h6>
+                        <ul>
+                            <li>
+                                <a href="about.html">About</a>
+                            </li>
+
+                            <li>
+                                <a href="services.html">Services</a>
+                            </li>
+                            
+                            <li>
+                                <a href="resources.html">Resources</a>
+                            </li>
+                            
+                            <li>
+                                <a href="investments.html">Investment Packages</a>
+                            </li>
+                            
+                            <li>
+                                <a href="calculator.html">Financial Calculator</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-12 mb-4 p-0 c">
+                    <div class="footer-links">
+                        <h6>Contact</h6>
+                        <p>
+                            <img src="icons/venue.svg" class="img-fluid">&nbsp;
+                            Borsigstr. 5, Feuerbach, Stuttgart, Germany.
+                        </p>
+
+                        <p class="p-0">
+                            <a href="mailto:brillianzhub@gmail.com">
+                                <img src="icons/at.svg" class="img-fluid">&nbsp;
+                                brillianzhub@gmail.com
+                            </a>
+                            
+                        </p>
+
+                        <p class="p-0 phone-number-link">
+                            <a href="tel:+49 1590 4976605">
+                                <img src="icons/phone.svg" class="img-fluid">&nbsp;
+                                +49 1590 4976605
+                            </a>
+                        </p>
+
+
+                        <div class="socials-media phone">
+                            <a href="">
+                                <img src="icons/facebook.svg" class="img-fluid" alt="Brillianzhub on facebook">
+                            </a>
+
+                            <a href="">
+                                <img src="icons/instagram.svg" class="img-fluid" alt="Brillianzhub on instagram">
+                            </a>
+
+                            <a href="">
+                                <img src="icons/x.svg" class="img-fluid" alt="Brillianzhub on x">
+                            </a>
+
+                            <a href="">
+                                <img src="icons/linkedin.svg" class="img-fluid" alt="Brillianzhub on linkedin">
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Copywrite Div -->
+        <div class="container-fluid copywrite-div p-0 b">
+            <div class="container-fluid">
+                <div class="row div-padding ">
+                    <div class="col-lg-5 col-md-5 col-sm-12 p-0 copy-div c">
+                        <p>Copyright &copy Brillianzhub 2023.&nbsp;  All Rights Reserved</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Menu Modal -->
+    <div class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen menuModal">
+        <div class="modal-content home-nav-bg-white">
+          <div class="modal-header vnav">
+            <h5 class="modal-title" id="exampleModalLabel">
+                <a href="index.html"><img src="images/logo/logoMenu.png" alt="Brillianzhub logo" class="phone-header-logo"></a>
+            </h5>
+
+            <img src="icons/menu_cancel.svg" class="img-fluid nav__icon" data-bs-dismiss="modal" aria-label="Close">
+          </div>
+          <div class="modal-body p-0">
+                <ul>
+                    <li class="active-link">
+                        <a href="about.html" class="active-page">
+                            About
+                            <img src="icons/arrow_right.svg" class="alignright">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="courses.html">
+                            Courses
+                            <img src="icons/arrow_right.svg" class="alignright">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="investments.html">
+                            Investments
+                            <img src="icons/arrow_right.svg" class="alignright">
+                        </a>
+                    </li>
+                    <li>
+                        <a onclick="showCourses()">
+                            Calculator
+                            <img src="icons/arrow_right.svg" class="alignright" id="dropdown-arrow" name="1">
+                        </a>
+                        <div id="course-link-div">
+                            <a href="compound-calculator.html">
+                                Compound Savings Calculator
+                                <img src="icons/arrow_right.svg" class="alignright">
+                            </a>
+
+                            <a href="stock-calculator.html">
+                                Stock Investment Calculator
+                                <img src="icons/arrow_right.svg" class="alignright">
+                            </a>
+                            
+                            <a href="real-estate-calculator.html">
+                                Real Estate Calculator
+                                <img src="icons/arrow_right.svg" class="alignright">
+                            </a>
+                            
+                        </div>
+                    </li>
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                            <img src="icons/arrow_right.svg" class="alignright">
+                        </a>
+                    </li>
+                </ul>
+
+                <center>
+                    <a href="signin.html">
+                        <button class="filled-btn-lg phone-nav-btn">My Account</button>
+                    </a>
+                </center>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <script type="text/javascript" src="js/ha.js"></script>
+    <script src="bootstrap-5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+</html>

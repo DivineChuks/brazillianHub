@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="Brillianzhub">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="images/logo/favicon.png">
+    <!--Font awsome-->
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+    <!--Proxima Nova now Font-->
+    <link rel="stylesheet" href="font/stylesheet.css">
+
+     <!-- Bootstrap CSS -->
+    <link href="bootstrap-5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  	<link rel="stylesheet" href="stylesheet/style.css?v=0" type="text/css">
+  	<link rel="stylesheet" href="stylesheet/media.css?v=0" type="text/css">
+
+	<title>Brillianzhub</title>
+</head>
+<body>
+	<!-- Navigation bar -->
+	<header class="fixed-top a">
+		<nav class="container-fluid div-padding home-nav-bg-white desktop main-nav b">
+			<a href="index.html">
+				<img src="images/logo/dnav_logo.png" alt="Brillianzhub logo" class="img-fluid nav-logo b">
+			</a>
+
+			<div class="nav-links c">
+				<ul>
+					<li>
+						<a href="about.html" class="active-page">About</a>
+					</li>
+					<li>
+						<a href="courses.html">Courses</a>
+					</li>
+					<li>
+						<a href="investments.html">Investments</a>
+					</li>
+                    <li>
+                        <div class="dropdown">
+                          <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            Calculator
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li>
+                                <a class="dropdown-item" href="compound-calculator.html">
+                                    <img src="icons/nav-money.svg" class="img-fluid icon-course">&nbsp;
+                                    <span>Compound Savings Calculator</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="stock-calculator.html">
+                                    <img src="icons/nav-stock.svg" class="img-fluid icon-course">&nbsp;
+                                    <span>Stock Investment Calculator</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="real-estate-calculator.html">
+                                    <img src="icons/nav-investment.svg" class="img-fluid icon-course">&nbsp;
+                                    <span>Real Estate Investment Calculator</span>
+                                </a>
+                            </li>
+                          </ul>
+                        </div>
+                    </li>
+					<li>
+						<a href="contact.html">Contact</a>
+					</li>
+					<li class="btn-link">
+						<a href="signin.html" class="account_btn">My Account
+						</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+	    <div class="header phone">
+	        <nav class="vnav home-nav-bg-white">
+	            <a href="index.html">
+	                <img src="images/logo/logoMenu.png" alt="Brillianzhub logo" class="phone-header-logo">
+	            </a>
+
+	            <a href="" data-bs-toggle="modal" data-bs-target="#menuModal">
+	                <img src="icons/menu.svg" class="nav__icon">
+	            </a>
+	        </nav>
+	    </div>
+	</header>
+
+	<main class="main no-main">
+        <div class="container-fluid div-holder home-nav-bg-green contact-div nav-clearance c">
+            <div class="grid-container-contact-div div-padding">
+                <div class="grid-item-contact-div signup-bg first-div-deatils img-holder b">
+                    <div class="container-fluid signup-holder">
+                        <h2>Sign In</h2>
+                    </div>
+                </div>
+
+                <div class="grid-item-contact-div form-holder-div home-nav-bg-green p-0 b">
+                    <div class="container-fluid form-details c">
+                        <form action="dashboard-courses.html" method="post">
+                            <div class="style-form form-mb">
+                              <label class="form-label">Email address<sup>*</sup></label>
+                              <input type="email" class="form-control" name="email_address" placeholder="Fill in your best email">
+                            </div>
+
+                            <div class="style-form password-holder form-mb">
+                              <label class="form-label">Password<sup>*</sup></label>
+                                <input type="password" name="password" autocomplete="current-password" class="password-input" id="id_password">
+                                <i class="fa fa-eye" id="togglePassword"></i>            
+                            </div>
+
+                            <p class="text-end mb-0">
+                                <button type="submit" class="filled-btn-lg ">
+                                    Sign In
+                                </button>
+                            </p>
+                        </form>
+                    </div>
+
+                    <div class="container-fluid extra-signup-detail p-0">
+                        <h5> 
+                            Don’t have an account? 
+                            <a href="signup.html">
+                                Create account here
+                            </a>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+		
+	</main>
+    
+    <!-- Menu Modal -->
+    <div class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen menuModal">
+        <div class="modal-content home-nav-bg-white">
+          <div class="modal-header vnav">
+            <h5 class="modal-title" id="exampleModalLabel">
+                <a href="index.html"><img src="images/logo/logoMenu.png" alt="Brillianzhub logo" class="phone-header-logo"></a>
+            </h5>
+
+            <img src="icons/menu_cancel.svg" class="img-fluid nav__icon" data-bs-dismiss="modal" aria-label="Close">
+          </div>
+          <div class="modal-body p-0">
+                <ul>
+                    <li class="active-link">
+                        <a href="about.html" class="active-page">
+                            About
+                            <img src="icons/arrow_right.svg" class="alignright">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="courses.html">
+                            Courses
+                            <img src="icons/arrow_right.svg" class="alignright">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="investments.html">
+                            Investments
+                            <img src="icons/arrow_right.svg" class="alignright">
+                        </a>
+                    </li>
+                    <li>
+                        <a onclick="showCourses()">
+                            Calculator
+                            <img src="icons/arrow_right.svg" class="alignright" id="dropdown-arrow" name="1">
+                        </a>
+                        <div id="course-link-div">
+                            <a href="compound-calculator.html">
+                                Compound Savings Calculator
+                                <img src="icons/arrow_right.svg" class="alignright">
+                            </a>
+
+                            <a href="stock-calculator.html">
+                                Stock Investment Calculator
+                                <img src="icons/arrow_right.svg" class="alignright">
+                            </a>
+                            
+                            <a href="real-estate-calculator.html">
+                                Real Estate Calculator
+                                <img src="icons/arrow_right.svg" class="alignright">
+                            </a>
+                            
+                        </div>
+                    </li>
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                            <img src="icons/arrow_right.svg" class="alignright">
+                        </a>
+                    </li>
+                </ul>
+
+                <center>
+                    <a href="signin.html">
+                        <button class="filled-btn-lg phone-nav-btn">My Account</button>
+                    </a>
+                </center>
+          </div>
+        </div>
+      </div>
+    </div>
+
+	<script type="text/javascript" src="js/ha.js"></script>
+	<script src="bootstrap-5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+</html>

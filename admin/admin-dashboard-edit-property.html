@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Brillianzhub">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/logo/favicon.png">
+    <!--Font awsome-->
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
+
+    <!--Proxima Nova now Font-->
+    <link rel="stylesheet" href="../font/stylesheet.css">
+
+     <!-- Bootstrap CSS -->
+    <link href="../bootstrap-5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../stylesheet/style.css?v=0" type="text/css">
+    <link rel="stylesheet" href="../stylesheet/media.css?v=0" type="text/css">
+
+    <title>Brillianzhub</title>
+</head>
+<body onload="propertyTypeForm()">
+    <!-- Navigation bar -->
+    <header class="fixed-top a">
+        <nav class="container-fluid div-padding home-nav-bg-white desktop main-nav b">
+            <a href="../index.html">
+                <img src="../images/logo/dnav_logo.png" alt="Brillianzhub logo" class="img-fluid nav-logo b">
+            </a>
+
+            <div class="nav-links c">
+                <ul>
+                    <li>
+                        <a href="../about.html" class="active-page">About</a>
+                    </li>
+                    <li>
+                        <a href="../courses.html">Courses</a>
+                    </li>
+                    <li>
+                        <a href="../investments.html">Investments</a>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                          <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            Calculator
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li>
+                                <a class="dropdown-item" href="../compound-calculator.html">
+                                    <img src="../icons/nav-money.svg" class="img-fluid icon-course">&nbsp;
+                                    <span>Compound Savings Calculator</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="../stock-calculator.html">
+                                    <img src="../icons/nav-stock.svg" class="img-fluid icon-course">&nbsp;
+                                    <span>Stock Investment Calculator</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="../real-estate-calculator.html">
+                                    <img src="../icons/nav-investment.svg" class="img-fluid icon-course">&nbsp;
+                                    <span>Real Estate Investment Calculator</span>
+                                </a>
+                            </li>
+                          </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="../contact.html">Contact</a>
+                    </li>
+                    <li class="btn-link">
+                        <a href="admin-dashboard-login.html" class="account_btn">My Account
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="header phone">
+            <nav class="vnav home-nav-bg-white">
+                <a href="../index.html">
+                    <img src="../images/logo/logoMenu.png" alt="Brillianzhub logo" class="phone-header-logo">
+                </a>
+
+                <a href="" data-bs-toggle="modal" data-bs-target="#menuModal">
+                    <img src="../icons/menu.svg" class="nav__icon">
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main no-main">
+        <div class="container-fluid courses2-div-house home-nav-bg-green p-0 c">
+            <div class="grid-container-courses3-div">
+                <div class="partition courses-list-div-holder course-top-padding home-nav-bg-white desktop b">
+                    <div class="container-fluid courses-list-div p-0 a">
+                        <h2>Admin</h2>
+                        <div class="accordion accordion-flushe" id="accordionFlushExample">
+                            <ul class="accordion-ul">
+                                <li class="active-course">
+                                    <a href="admin-dashboard-courses-home.html">Courses</a>
+                                </li>
+
+                                <li>
+                                    <a href="admin-dashboard-investments-home.html">Investments</a>
+                                </li>
+
+                                <li>
+                                    <a href="admin-dashboard-blog-home.html">Blog</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="partition courses-container-div course-top-padding b">
+                    <div class="container-fluid courses-overview-div admin-content alt-div a">
+                        <!-- Contents -->
+                        <h4>Property Details</h4>
+
+                        <form action="admin-dashboard-property-preview.html" method="post">
+                            <div class="p-0" id="formAdd">
+                                <div class="container-fluid home-nav-bg-white rounded-edges admin-mb b">
+                                    <div class="form-group style-form mb-3">
+                                        <label>Property name</label>
+                                        <input type="text" name="property_name" class="form-control title-input bg-none" value="School Hostel Accommodation">
+                                    </div>
+                                </div>
+                                
+                                <!-- From this section below the property type will play a big key role here, when you fetch the property type from DB, you used the SELECTED atrribute on the option that matches(use if statements), This will determine the form fields that will be displayed. -->
+                                <div class="container-fluid home-nav-bg-white rounded-edges admin-mb b">
+                                    <div class="form-group style-form mb-3">
+                                        <label>Property type</label>
+                                        <select class="form-select" name="property_type" onchange="propertyTypeForm()" id="property-type">
+                                          <option>Select property type</option>
+                                          <option selected>Brillianzhub Properties</option>
+                                          <option>Co-owned Properties</option>
+                                          <option>Verified Vendors Properties</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <div class="container-fluid home-nav-bg-white rounded-edges admin-mb b" id="location">
+                                    <div class="form-group style-form mb-3">
+                                        <label>Location</label>
+                                        <input type="text" name="location" class="form-control bg-none" value="Ihiagwa, Owerri">
+                                    </div>
+                                </div>
+
+                                <!-- Form field displayed based on type -->
+                                <!-- For here, just place the data accordingly from the DB, some will be empty, nbut as long as they are displayed they wont be submitted -->
+                                <div class="p-0" id="Brillianzhub-properties">
+                                    <div class="container-fluid home-nav-bg-white rounded-edges admin-mb b">
+                                        <div class="form-group style-form mb-3">
+                                            <label>Starting price</label>
+                                            <input type="text" name="starting_price" class="form-control" placeholder="₦12,000,000">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="p-0" id="Co-owned-properties">
+                                    <div class="container-fluid home-nav-bg-white rounded-edges admin-mb b">
+                                        <div class="form-group style-form mb-3">
+                                            <label>Unit price</label>
+                                            <input type="text" name="unit_price" class="form-control bg-none" value="₦12,000">
+                                        </div>
+                                    </div>
+
+                                    <div class="container-fluid home-nav-bg-white rounded-edges admin-mb b">
+                                        <div class="form-group style-form mb-3">
+                                            <label>Available slots</label>
+                                            <input type="text" name="available_slots" class="form-control bg-none" value="3000">
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="p-0" id="Verified-Vendors-properties">
+                                    <div class="container-fluid home-nav-bg-white rounded-edges admin-mb b">
+                                        <div class="form-group style-form mb-3">
+                                            <label>Vendor name</label>
+                                            <input type="text" name="vendor_name" class="form-control bg-none" value="Sallysafe real estate">
+                                        </div>
+                                    </div>
+
+                                    <div class="container-fluid home-nav-bg-white rounded-edges admin-mb b">
+                                        <div class="form-group style-form mb-3">
+                                            <label>Affiliate URL (if applicable)</label>
+                                            <input type="text" name="affiliate_url" class="form-control bg-none" value="https://www.smashingmagazine.com/2018/01/drag-drop-file-uploader-vanilla-js/">
+                                        </div>
+                                    </div>
+                                
+                                    <div class="container-fluid home-nav-bg-white rounded-edges admin-mb b">
+                                        <div class="form-group style-form mb-3">
+                                            <label>Location</label>
+                                            <input type="text" name="location" class="form-control" value="Ihiagwa, Owerri">
+                                        </div>
+                                    </div>
+
+                                    <div class="container-fluid home-nav-bg-white rounded-edges admin-mb b">
+                                        <div class="form-group style-form mb-3">
+                                            <label>Starting price</label>
+                                            <input type="text" name="starting_price" class="form-control" value="₦12,000,000">
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="container-fluid home-nav-bg-white rounded-edges admin-mb b">
+                                    <div class="form-group style-form mb-3">
+                                        <label>Slideshow</label>
+                                        
+                                    </div>
+                                </div>
+
+                                <div class="container-fluid home-nav-bg-white rounded-edges admin-mb b">
+                                    <div class="form-group style-form mb-3">
+                                        <label>Description</label>
+                                        <textarea name="description" class="form-control bg-none" id="default1"  rows="5">
+                                            Live in luxury in this newly completed building, offering the latest amenities and features in a prime location. With spacious floor plans, stunning views, and state-of-the-art finishes, this building is the perfect place to call home.<br><br>
+
+                                            Enjoy the convenience of having everything you need at your fingertips, with on-site amenities such as a fitness center, swimming pool, and rooftop terrace. Plus, you'll be just steps away from shopping, dining, and entertainment.
+                                        </textarea>
+                                    </div>
+                                </div>
+
+                                <div class="container-fluid home-nav-bg-white rounded-edges admin-mb b">
+                                    <div class="form-group style-form mb-3">
+                                        <label>Features</label>
+                                        <textarea name="Features" class="form-control bg-none" id="default2"  rows="5">
+                                            <ul>
+                                                <li>
+                                                    A smart one bedroom + sitting room with automated home features
+                                                </li>
+
+                                                <li>
+                                                    Bedroom area , a modern wardrobe , dining area , kitchen
+                                                </li>
+                                                
+                                                <li>
+                                                    High quality beddings & furniture
+                                                </li>
+                                                
+                                                <li>
+                                                    Fully finished kitchen area with a cooker, microwave, heat extractor, washing machine and smoke detectors
+                                                </li>
+                                                
+                                                <li>
+                                                    Fingerprint or card door access, doorbell & cameras
+                                                </li>
+                                                <li>
+                                                    A car parking space 24hours electricity and treated water supply
+                                                </li>
+                                                
+                                                <li>
+                                                    Central swimming pool area, a lounge, a gym and a playground
+                                                </li>
+                                                
+                                                <li>
+                                                    Located at Hockley millenial town, eko akete
+                                                </li>
+                                                
+                                                <li>
+                                                    A perfect place for annual or holiday rentals In development by Landwey
+                                                </li>
+                                            </ul>
+                                        </textarea>
+                                    </div>
+                                </div>
+                                
+                                <div class="container-fluid home-nav-bg-white rounded-edges admin-mb b">
+                                    <div class="form-group style-form mb-3">
+                                        <label>Tags</label>
+                                        <select class="form-select" name="tags">
+                                          <option>Select tags</option>
+                                          <option selected>Newly Completed</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p class="text-end mt-5">
+                                <button type="submit" class="filled-btn-lg ">Preview Property</button>
+                            </p>
+                        </form>
+                        
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        
+    </main>
+
+
+    
+    <!-- Menu Modal -->
+    <div class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen menuModal">
+        <div class="modal-content home-nav-bg-white">
+          <div class="modal-header vnav">
+            <h5 class="modal-title" id="exampleModalLabel">
+                <a href="../index.html"><img src="../images/logo/logoMenu.png" alt="Brillianzhub logo" class="phone-header-logo"></a>
+            </h5>
+
+            <img src="../icons/menu_cancel.svg" class="img-fluid nav__icon" data-bs-dismiss="modal" aria-label="Close">
+          </div>
+          <div class="modal-body p-0">
+                <ul>
+                    <li class="active-link">
+                        <a href="../about.html" class="active-page">
+                            About
+                            <img src="../icons/arrow_right.svg" class="alignright">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../courses.html">
+                            Courses
+                            <img src="../icons/arrow_right.svg" class="alignright">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../investments.html">
+                            Investments
+                            <img src="../icons/arrow_right.svg" class="alignright">
+                        </a>
+                    </li>
+                    <li>
+                        <a onclick="showCourses2()">
+                            Calculator
+                            <img src="../icons/arrow_right.svg" class="alignright" id="dropdown-arrow" name="1">
+                        </a>
+                        <div id="course-link-div">
+                            <a href="../compound-calculator.html">
+                                Compound Savings Calculator
+                                <img src="../icons/arrow_right.svg" class="alignright">
+                            </a>
+
+                            <a href="../stock-calculator.html">
+                                Stock Investment Calculator
+                                <img src="../icons/arrow_right.svg" class="alignright">
+                            </a>
+                            
+                            <a href="../real-estate-calculator.html">
+                                Real Estate Calculator
+                                <img src="../icons/arrow_right.svg" class="alignright">
+                            </a>
+                            
+                        </div>
+                    </li>
+                    <li>
+                        <a href="../contact.html">
+                            Contact
+                            <img src="../icons/arrow_right.svg" class="alignright">
+                        </a>
+                    </li>
+                </ul>
+
+                <center>
+                    <a href="admin-dashboard-login.html">
+                        <button class="filled-btn-lg phone-nav-btn">My Account</button>
+                    </a>
+                </center>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- <script src="{{URL::asset('laravel-ckeditor/ckeditor.js')}}"></script>
+    <script type="text/javascript">
+      CKEDITOR.replace('ig');
+      CKEDITOR.replace('ig2');
+    </script> -->
+
+    <script src="../ckeditor5/ckeditor.js"></script>
+    <script>
+        var q = 2;
+
+        for (var i = 1; i <= q; i++) {
+             ClassicEditor
+            .create( document.getElementById( `default${i}` ), {
+                // toolbar: [ 'heading', '|', 'bold', 'italic', 'link' ]
+            } )
+            .then( editor => {
+                window.editor = editor;
+            } )
+            .catch( err => {
+                console.error( err.stack );
+            } );
+        }
+       
+    </script>
+
+    <script type="text/javascript" src="../js/ha.js"></script>
+    <script src="../bootstrap-5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+</html>
